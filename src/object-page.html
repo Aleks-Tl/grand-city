@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <section class="promo object-page">
+      <div class="header__container">
+        <div class="social-posit">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="object-page__head">
+            <div class="navigation">
+              <ul>
+                <li><a class="selected" href="#">Home</a></li>
+                <li><a class="selected" href="#">Property</a></li>
+                <li><a href="#">Cu mei quem sensibus</a></li>
+              </ul>
+            </div>
+            <h2 class="object-page__title title">Cu mei quem sensibus</h2>
+            <div class="object-page__info">
+              <ul>
+                <li><a href="#">$ 123456.00</a></li>
+                <li><a href="#">150 m<sup>2</sup></a></li>
+                <li><a href="#">2 Bathrooms</a></li>
+                <li><a href="#">Concierge Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script defer src="js/main.js"></script>
+</body>
+
+</html>
