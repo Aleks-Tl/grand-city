@@ -199,14 +199,16 @@
         <div class="property__wrap">
           <div class="property__head">
             <h2 class="property__title title">Property</h2>
-            <ul>
-              <li class="all active">All property</li>
-              <li class="rent">For rent</li>
-              <li class="sale">For sale</li>
-            </ul>
+            <nav class="property__list">
+              <ul>
+                <li data-f="all" class="all active">All property</li>
+                <li data-f="rent" class="rent">For rent</li>
+                <li data-f="sale" class="sale">For sale</li>
+              </ul>
+            </nav>
           </div>
           <div class="property__content">
-            <div class="property__item">
+            <div class="property__item rent">
               <div class="property__img">
                 <picture>
                   <!-- <source srcset="img/property-img-1.avif" type="image/avif">
@@ -225,7 +227,7 @@
                 </div>
               </div>
             </div>
-            <div class="property__item">
+            <div class="property__item sale">
               <div class="property__img">
                 <picture>
                   <!-- <source srcset="img/property-img-1.avif" type="image/avif">
@@ -244,7 +246,7 @@
                 </div>
               </div>
             </div>
-            <div class="property__item">
+            <div class="property__item sale">
               <div class="property__img">
                 <picture>
                   <!-- <source srcset="img/property-img-1.avif" type="image/avif">
@@ -263,7 +265,7 @@
                 </div>
               </div>
             </div>
-            <div class="property__item">
+            <div class="property__item rent">
               <div class="property__img">
                 <picture>
                   <!-- <source srcset="img/property-img-1.avif" type="image/avif">
@@ -282,7 +284,7 @@
                 </div>
               </div>
             </div>
-            <div class="property__item">
+            <div class="property__item sale">
               <div class="property__img">
                 <picture>
                   <!-- <source srcset="img/property-img-1.avif" type="image/avif">
@@ -301,7 +303,7 @@
                 </div>
               </div>
             </div>
-            <div class="property__item">
+            <div class="property__item sale">
               <div class="property__img">
                 <picture>
                   <!-- <source srcset="img/property-img-1.avif" type="image/avif">
@@ -419,17 +421,16 @@
       <a href="https://webcapitan.com" target="_blank" class="webcapitan">Development by Webcapitan TEAM</a>
     </div>
   </div>
-  <div class="all_pages">
+  <!-- <div class="all_pages">
     <div class="page_point">Pages</div>
     <ul class="page_list">
       <li><a href="index.html">Index</a></li>
       <li><a href="object-page.html">Object page</a></li>
     </ul>
-  </div>
+  </div> -->
 </footer>
 
   </div>
-
   <script defer src="js/main.js"></script>
 </body>
 
