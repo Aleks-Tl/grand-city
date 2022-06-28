@@ -22,15 +22,16 @@
               <h1 class="promo__title title">Probatus salutatus in mei</h1>
               <div class="promo__subtitle">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
                 offendit. An sit graeci vidisse vivendum, ei eum.</div>
-              <a class="promo__btn btn btn-reset" href="#" download="">Download Brochure</a>
+              <a class="promo__btn btn btn-reset" href="#">Find property</a>
             </div>
             <picture>
               <!-- <source srcset="img/promo-image.avif" type="image/avif">
               <source srcset="img/promo-image.webp" type="image/webp"> -->
-              <img loading="lazy" src="img/promo-image.jpg" class="image" alt="promo-image">
+              <!-- <img loading="lazy" src="img/promo-image.jpg" class="image" alt="promo-image"> -->
+              <img loading="lazy" src="img/team.jpg" class="image" alt="promo-image">
             </picture>
           </div>
-          @include('partials/search.html')
+          <!-- @include('partials/search.html') -->
         </div>
       </div>
     </section>
@@ -272,6 +273,44 @@
     @include('partials/footer.html')
 
   </div>
+  <script>
+    // Filter
+
+    const filterBox = document.querySelectorAll('.property__item');
+    const boxContent = document.querySelector('.property__content');
+    const boxList = document.querySelector('.property__list');
+    boxList.addEventListener('click', event => {
+      if (event.target.tagName !== 'LI') return false;
+      let filterClass = event.target.dataset['f'];
+      filterBox.forEach(elem => {
+        elem.classList.remove('hide');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+          elem.classList.add('hide');
+          if (elem.classList.contains('hide')) {
+            boxContent.append(elem);
+          }
+        }
+      })
+    })
+
+    // Activiti class for filter
+
+    const btnContainer = document.querySelector('.property__list');
+
+    let items = btnContainer.querySelectorAll('li');
+
+    for (var i = 0; i < items.length; i++) {
+      items[i].addEventListener("click", function (e) {
+        if (!e.target.classList.contains('active')) {
+          items.forEach((elem) => {
+            elem.classList.remove('active');
+          })
+          e.target.classList.add('active');
+        } else {
+        }
+      });
+    }
+  </script>
   <script defer src="js/main.js"></script>
 </body>
 
