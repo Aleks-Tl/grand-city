@@ -395,12 +395,17 @@ a {
         font-size: 14px;
         line-height: 30px;
         color: #949494;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: var(--primary);
+        }
         @media (max-width: 576px) {
           font-size: 12px;
         }
         &.selected {
           color: var(--primary);
           position: relative;
+          transition: all 0.3s ease 0s;
           &:after {
             content: '';
             position: absolute;
@@ -412,6 +417,9 @@ a {
             border: 1px solid var(--blueBg);
             border-radius: 50%;
             background-color: transparent;
+          }
+          &:hover {
+            opacity: 0.8;
           }
         }
       }
