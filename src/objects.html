@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <section class="promo objects">
+      <div class="header__container">
+        <div class="social-posit">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="objects__wrap">
+            <div class="object-page__head">
+              <div class="navigation">
+                <ul>
+                  <li><a class="selected" href="#">Home</a></li>
+                  <li><a href="#">Property</a></li>
+                </ul>
+              </div>
+              <h2 class="objects__title title">Property</h2>
+            </div>
+          </div>
+          <!-- @include('partials/search.html') -->
+        </div>
+      </div>
+    </section>
+
+
+    <section class="objects-property">
+      <div class="property">
+        <div class="container">
+          <div class="property__wrap">
+            <div class="property__head">
+              <nav class="property__list">
+                <ul>
+                  <li data-f="all" class="all active">All property</li>
+                  <li data-f="rent" class="rent">For rent</li>
+                  <li data-f="sale" class="sale">For sale</li>
+                </ul>
+              </nav>
+            </div>
+            <div class="property__content">
+              <div class="property__item rent">
+                <div class="property__img">
+                  <picture>
+                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/property-img-1.jpg" alt="property-img">
+                  </picture>
+                </div>
+                <div class="property__info">
+                  <div class="property__name">Cu mei quem sensibus antiopam</div>
+                  <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                    quem voluptaria, pro inimicus similique ad.</div>
+                  <div class="property__price">$ 123456.00</div>
+                  <div class="property__btns">
+                    <a href="#" class="property__btn btn btn-reset">Contact Us</a>
+                    <a href="#" class="property__btn btn-outline btn-reset">Details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="property__item sale">
+                <div class="property__img">
+                  <picture>
+                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture>
+                </div>
+                <div class="property__info">
+                  <div class="property__name">Cu mei quem sensibus antiopam</div>
+                  <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                    quem voluptaria, pro inimicus similique ad.</div>
+                  <div class="property__price">$ 123456.00</div>
+                  <div class="property__btns">
+                    <a href="#" class="property__btn btn btn-reset">Contact Us</a>
+                    <a href="#" class="property__btn btn-outline btn-reset">Details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="property__item sale">
+                <div class="property__img">
+                  <picture>
+                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/property-img-3.jpg" alt="property-img">
+                  </picture>
+                </div>
+                <div class="property__info">
+                  <div class="property__name">Cu mei quem sensibus antiopam</div>
+                  <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                    quem voluptaria, pro inimicus similique ad.</div>
+                  <div class="property__price">$ 123456.00</div>
+                  <div class="property__btns">
+                    <a href="#" class="property__btn btn btn-reset">Contact Us</a>
+                    <a href="#" class="property__btn btn-outline btn-reset">Details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="property__item rent">
+                <div class="property__img">
+                  <picture>
+                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/property-img-4.jpg" alt="property-img">
+                  </picture>
+                </div>
+                <div class="property__info">
+                  <div class="property__name">Cu mei quem sensibus antiopam</div>
+                  <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                    quem voluptaria, pro inimicus similique ad.</div>
+                  <div class="property__price">$ 123456.00</div>
+                  <div class="property__btns">
+                    <a href="#" class="property__btn btn btn-reset">Contact Us</a>
+                    <a href="#" class="property__btn btn-outline btn-reset">Details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="property__item sale">
+                <div class="property__img">
+                  <picture>
+                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/property-img-5.jpg" alt="property-img">
+                  </picture>
+                </div>
+                <div class="property__info">
+                  <div class="property__name">Cu mei quem sensibus antiopam</div>
+                  <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                    quem voluptaria, pro inimicus similique ad.</div>
+                  <div class="property__price">$ 123456.00</div>
+                  <div class="property__btns">
+                    <a href="#" class="property__btn btn btn-reset">Contact Us</a>
+                    <a href="#" class="property__btn btn-outline btn-reset">Details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="property__item sale">
+                <div class="property__img">
+                  <picture>
+                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/property-img-6.jpg" alt="property-img">
+                  </picture>
+                </div>
+                <div class="property__info">
+                  <div class="property__name">Cu mei quem sensibus antiopam</div>
+                  <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                    quem voluptaria, pro inimicus similique ad.</div>
+                  <div class="property__price">$ 123456.00</div>
+                  <div class="property__btns">
+                    <a href="#" class="property__btn btn btn-reset">Contact Us</a>
+                    <a href="#" class="property__btn btn-outline btn-reset">Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  <div class="property__filter filter">
+              <div class="filter__item">
+                <div class="filter__img">
+                  <picture>
+                    <source srcset="img/property-img-2.avif" type="image/avif">
+                    <source srcset="img/property-img-2.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__img">
+                  <picture>
+                    <source srcset="img/property-img-3.avif" type="image/avif">
+                    <source srcset="img/property-img-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-3.jpg" alt="property-img">
+                  </picture>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__img">
+                  <picture>
+                    <source srcset="img/property-img-4.avif" type="image/avif">
+                    <source srcset="img/property-img-4.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-4.jpg" alt="property-img">
+                  </picture>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__img">
+                  <picture>
+                    <source srcset="img/property-img-5.avif" type="image/avif">
+                    <source srcset="img/property-img-5.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-5.jpg" alt="property-img">
+                  </picture>
+                </div>
+              </div>
+            </div> -->
+            <a href="#" class="btn-show btn-reset">Show More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/questions.html')
+
+    @include('partials/footer.html')
+
+  </div>
+  <script>
+    // Filter
+
+    const filterBox = document.querySelectorAll('.property__item');
+    const boxContent = document.querySelector('.property__content');
+    const boxList = document.querySelector('.property__list');
+    boxList.addEventListener('click', event => {
+      if (event.target.tagName !== 'LI') return false;
+      let filterClass = event.target.dataset['f'];
+      filterBox.forEach(elem => {
+        elem.classList.remove('hide');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+          elem.classList.add('hide');
+          if (elem.classList.contains('hide')) {
+            boxContent.append(elem);
+          }
+        }
+      })
+    })
+
+    // Activiti class for filter
+
+    const btnContainer = document.querySelector('.property__list');
+
+    let items = btnContainer.querySelectorAll('li');
+
+    for (var i = 0; i < items.length; i++) {
+      items[i].addEventListener("click", function (e) {
+        if (!e.target.classList.contains('active')) {
+          items.forEach((elem) => {
+            elem.classList.remove('active');
+          })
+          e.target.classList.add('active');
+        } else {
+        }
+      });
+    }
+  </script>
+  <script defer src="js/main.js"></script>
+</body>
+
+</html>

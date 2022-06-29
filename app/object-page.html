@@ -346,6 +346,81 @@
       </div>
     </section>
 
+    <section class="similar">
+      <div class="container">
+        <div class="similar__wrap">
+          <div class="similar__title title">Similar Objects</div>
+          <div class="similar__slider">
+            <div class="swiper mySwiper3">
+              <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-1.jpg">
+                  </picture>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-2.jpg">
+                  </picture>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-3.jpg">
+                  </picture>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-4.jpg">
+                  </picture>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-2.jpg">
+                  </picture>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-4.jpg">
+                  </picture>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-1.jpg">
+                  </picture>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <picture>
+                    <!-- <source srcset="img/similar-slide-img-1.avif" type="image/avif">
+                  <source srcset="img/similar-slide-img-1.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/similar-slide-img-3.jpg">
+                  </picture>
+                </a>
+              </div>
+              <div class="swiper-pagination"></div>
+
+            </div>
+            <div class="swiper-two-btn-next"><img src="img/similar-slider-arrow-next.svg" alt="arrow-next"></div>
+            <div class="swiper-two-btn-prev"><img src="img/similar-slider-arrow-prev.svg" alt="arrow-prev"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
     <footer class="footer">
   <div class="container">
     <div class="footer__wrap">
@@ -397,6 +472,7 @@
     <div class="page_point">Pages</div>
     <ul class="page_list">
       <li><a href="index.html">Index</a></li>
+      <li><a href="objects.html">Objects</a></li>
       <li><a href="object-page.html">Object page</a></li>
     </ul>
   </div>
@@ -473,6 +549,45 @@
         }
       }
     }
+
+    //Swiper for similar section
+
+    var swiperTwo = new Swiper(".mySwiper3", {
+      watchSlidesProgress: true,
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-two-btn-next",
+        prevEl: ".swiper-two-btn-prev",
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          centeredSlides: true,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        // when window width is >= 640px
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 15
+        },
+        993: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      }
+    });
   </script>
   <script defer src="js/main.js"></script>
 </body>
