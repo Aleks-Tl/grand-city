@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <section class="promo management">
+      <div class="header__container">
+        <div class="social-posit">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="management__head">
+            <div class="navigation">
+              <ul>
+                <li><a class="selected" href="#">Home</a></li>
+                <li><a class="selected" href="#">Property</a></li>
+                <li><a href="#">Cu mei quem sensibus</a></li>
+              </ul>
+            </div>
+            <h2 class="management__title title">Property Management</h2>
+          </div>
+          <div class="banner">
+            <picture>
+              <!-- <source srcset="img/banner-about.avif" type="image/avif">
+              <source srcset="img/banner-about.webp" type="image/webp"> -->
+              <img loading="lazy" src="img/banner-management.jpg">
+            </picture>
+          </div>
+          <div class="management__content">
+            <div class="management__text">
+              <p>Property management is the operation, control, maintenance, and oversight of real estate and physical
+                property. This can include residential, commercial, and land real estate. Management indicates the need
+                of real estate to be cared for and monitored, with accountability for and attention to its useful life
+                and condition considered. This is much akin to the role of management in any business.</p>
+              <p>Property management is also the management of personal property, equipment, tooling, and physical
+                capital assets that are acquired and used to build, repair, and maintain end item deliverables. Property
+                management involves the processes, systems, and manpower required to manage the life cycle of all
+                acquired property as defined above including acquisition, control, accountability, responsibility,
+                maintenance, utilization, and disposition.</p>
+            </div>
+            <h3 class="title">Our property management services include:</h3>
+            <div class="management__list">
+              <ul>
+                <li>Tenant Relations + Retention</li>
+                <li>Business Planning, Accounting + Reporting</li>
+                <li>Lease and Contract Administration</li>
+                <li>Project Management</li>
+                <li>Personnel Training + Quality Assurance</li>
+                <li>Engineering, Mechanical + Preventive Maintenance</li>
+                <li>Energy Conservation + Sustainability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="feed-form"
+      style="background-image: url('img/feed-form-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="feed-form__wrap">
+          <div class="feed-form__info">
+            <div class="feed-form__title title">Need Property Management?</div>
+            <div class="feed-form__call">Call Now!
+              <a href="tel:12345678900">+1 234 567 8900</a>
+            </div>
+          </div>
+          <p class="feed-form__or">or</p>
+          <div class="feed-form__form">
+            <div class="feed-form__send">Send us a message</div>
+            <form action="#" class="form">
+              <input class="feed-form__name" type="text" name="name" placeholder="Name" required>
+              <input class="feed-form__email" type="email" name="email" placeholder="Email or phone number" required>
+              <textarea class="feed-form__message" name="message" placeholder="Your message"></textarea>
+              <button class="btn-reset feed-form__btn btn-white">Contact us</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script defer src="js/main.js"></script>
+</body>
+
+</html>
