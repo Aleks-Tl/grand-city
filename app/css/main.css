@@ -602,6 +602,13 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   color: #9B9B9B;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.header__burger:hover {
+  color: var(--primary);
 }
 @media (max-width: 768px) {
   .header__burger {
@@ -3892,6 +3899,250 @@ a {
 @media (max-width: 768px) {
   .management .banner {
     margin-top: 40px;
+  }
+}
+
+.partnership {
+  padding-bottom: 160px;
+}
+@media (max-width: 768px) {
+  .partnership {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .partnership {
+    padding-bottom: 50px;
+  }
+}
+.partnership__head {
+  max-width: 1270px;
+  margin: 0 auto;
+}
+.partnership__title {
+  margin-top: 45px;
+}
+@media (max-width: 576px) {
+  .partnership__title {
+    text-align: left;
+    margin-top: 25px;
+  }
+}
+.partnership__content {
+  max-width: 1270px;
+  margin: 0 auto;
+}
+.partnership__content p {
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--primary);
+}
+@media (max-width: 576px) {
+  .partnership__content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.partnership h3 {
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 64px;
+  color: var(--primary);
+}
+@media (max-width: 576px) {
+  .partnership h3 {
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+.partnership__btn {
+  margin-top: 45px;
+}
+@media (max-width: 576px) {
+  .partnership__btn {
+    margin-top: 25px;
+  }
+}
+.partnership .banner {
+  margin-top: 70px;
+}
+@media (max-width: 768px) {
+  .partnership .banner {
+    margin-top: 40px;
+  }
+}
+.partnership .object-info__header {
+  margin-top: 45px;
+}
+@media (max-width: 576px) {
+  .partnership .object-info__header {
+    margin-top: 25px;
+  }
+}
+.nibh {
+  padding-top: 115px;
+  padding-bottom: 120px;
+  background-color: #1A2635;
+}
+@media (max-width: 768px) {
+  .nibh {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 576px) {
+  .nibh {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.nibh__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1270px;
+  margin: 0 auto;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .nibh__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+.nibh__content {
+  max-width: 650px;
+}
+@media (max-width: 1200px) {
+  .nibh__content {
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .nibh__content {
+    max-width: 100%;
+  }
+}
+.nibh h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 64px;
+  color: var(--primary);
+}
+@media (max-width: 992px) {
+  .nibh h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 576px) {
+  .nibh h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.nibh p {
+  margin-top: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--primary);
+}
+@media (max-width: 992px) {
+  .nibh p {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .nibh p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.nibh h3 {
+  margin-top: 35px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--primary);
+}
+@media (max-width: 992px) {
+  .nibh h3 {
+    margin-top: 25px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .nibh h3 {
+    font-size: 18px;
+  }
+}
+.nibh__btn {
+  margin-top: 35px;
+}
+
+.commune {
+  padding-top: 115px;
+  padding-bottom: 120px;
+}
+@media (max-width: 768px) {
+  .commune {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 576px) {
+  .commune {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.commune__wrap {
+  max-width: 1270px;
+  margin: 0 auto;
+}
+.commune h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 64px;
+  color: var(--primary);
+}
+@media (max-width: 992px) {
+  .commune h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 576px) {
+  .commune h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.commune p {
+  margin-top: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--primary);
+}
+@media (max-width: 992px) {
+  .commune p {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .commune p {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 /*# sourceMappingURL=main.css.map */

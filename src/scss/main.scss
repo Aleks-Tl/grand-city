@@ -37,6 +37,11 @@
     line-height: 18px;
     text-transform: uppercase;
     color: #9B9B9B;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: var(--primary);
+    }
     @media (max-width: 768px) {
       font-size: 14px;
     }
@@ -2828,6 +2833,263 @@
       }
     }
 }
+
+// Page partnership
+
+
+.partnership {
+    padding-bottom: 160px;
+    @media (max-width: 768px) {
+      padding-bottom: 100px;
+    }
+    @media (max-width: 576px) {
+      padding-bottom: 50px;
+    }
+		// .partnership__head
+
+		&__head {
+      max-width: 1270px;
+      margin: 0 auto;
+    }
+
+		// .partnership__title
+
+		&__title {
+      margin-top: 45px;
+      @media (max-width: 576px) {
+        text-align: left;
+        margin-top: 25px;
+      }
+    }
+
+		// .partnership__content
+
+		&__content {
+      max-width: 1270px;
+      margin: 0 auto;
+      p {
+        font-weight: 400;
+        line-height: 30px;
+        color: var(--primary);
+        @media (max-width: 576px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+
+		// .partnership__name
+    h3 {
+      margin-top: 50px;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 64px;
+      color: var(--primary);
+      @media (max-width: 576px) {
+        margin-top: 20px;
+        font-size: 25px;
+        line-height: 32px;
+      }
+    }
+
+		// .partnership__btn
+
+		&__btn {
+      margin-top: 45px;
+      @media (max-width: 576px) {
+        margin-top: 25px;
+      }
+    }
+
+    .banner {
+      margin-top: 70px;
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
+    }
+
+    .object-info {
+
+      // .object-info__header
+
+      &__header {
+        margin-top: 45px;
+        @media (max-width: 576px) {
+          margin-top: 25px;
+        }
+      }
+
+      // .object-info__item
+
+      &__item {}
+
+      // .object-info__body
+
+      &__body {}
+
+      // .object-info__box
+
+      &__box {}
+  }
+}
+
+
+// Section Nibh
+
+.nibh {
+  padding-top: 115px;
+  padding-bottom: 120px;
+  background-color: #1A2635;
+  @media (max-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  // .nibh__wrap
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1270px;
+    margin: 0 auto;
+    gap: 40px;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // .nibh__img
+
+  &__img {}
+
+  // .nibh__content
+
+  &__content {
+    max-width: 650px;
+    @media (max-width: 1200px) {
+      max-width: 50%;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  // .nibh__title
+
+  h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 64px;
+    color: var(--primary);
+    @media (max-width: 992px) {
+      font-size: 28px;
+      line-height: 35px;
+    }
+    @media (max-width: 576px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  // .nibh__text
+
+  p {
+    margin-top: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--primary);
+    @media (max-width: 992px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 576px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  // .nibh__subtitle
+
+  h3 {
+    margin-top: 35px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--primary);
+    @media (max-width: 992px) {
+      margin-top: 25px;
+      font-size: 22px;
+    }
+    @media (max-width: 576px) {
+      font-size: 18px;
+    }
+  }
+
+  // .nibh__btn
+
+  &__btn {
+    margin-top: 35px;
+  }
+}
+
+// Section commune
+.commune {
+  padding-top: 115px;
+  padding-bottom: 120px;
+  @media (max-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  // .commune__wrap
+
+  &__wrap {
+    max-width: 1270px;
+    margin: 0 auto;
+  }
+
+  // .commune__title
+
+  h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 64px;
+    color: var(--primary);
+    @media (max-width: 992px) {
+      font-size: 28px;
+      line-height: 35px;
+    }
+    @media (max-width: 576px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  // .commune__content
+
+  p {
+    margin-top: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--primary);
+    @media (max-width: 992px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 576px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+
+
 
 
 
