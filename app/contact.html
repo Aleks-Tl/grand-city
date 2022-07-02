@@ -44,7 +44,7 @@
   </nav>
 </header>
 
-    <section class="promo management">
+    <section class="promo contact">
       <div class="header__container">
         <div class="social-posit">
           <ul>
@@ -54,73 +54,50 @@
           </ul>
         </div>
         <div class="container">
-          <div class="management__head">
+          <div class="contact__head">
             <div class="navigation">
               <ul>
                 <li><a class="selected" href="#">Home</a></li>
-                <li><a href="#">Property Management</a></li>
+                <li><a href="#">Contact Us</a></li>
               </ul>
             </div>
-            <h2 class="management__title title">Property Management</h2>
+            <h2 class="contact__title title">Contact Us</h2>
           </div>
-          <div class="banner">
-            <picture>
-              <!-- <source srcset="img/banner-about.avif" type="image/avif">
-              <source srcset="img/banner-about.webp" type="image/webp"> -->
-              <img loading="lazy" src="img/banner-management.jpg">
-            </picture>
-          </div>
-          <div class="management__content">
-            <div class="management__text">
-              <p>Property management is the operation, control, maintenance, and oversight of real estate and physical
-                property. This can include residential, commercial, and land real estate. Management indicates the need
-                of real estate to be cared for and monitored, with accountability for and attention to its useful life
-                and condition considered. This is much akin to the role of management in any business.</p>
-              <p>Property management is also the management of personal property, equipment, tooling, and physical
-                capital assets that are acquired and used to build, repair, and maintain end item deliverables. Property
-                management involves the processes, systems, and manpower required to manage the life cycle of all
-                acquired property as defined above including acquisition, control, accountability, responsibility,
-                maintenance, utilization, and disposition.</p>
+
+          <div class="contact__content feed-form">
+            <div class="contact__block">
+              <div class="contact__phone">
+                <div class="contact__name">Phone</div>
+                <a href="tel:+12345678900" class="contact__val">+1 234 567 8900</a>
+              </div>
+              <div class="contact__mail">
+                <div class="contact__name">Email</div>
+                <a href="mailto:info@grandcity.com" class="contact__val">info@grandcity.com</a>
+              </div>
+              <div class="contact__office">
+                <div class="contact__name">Office</div>
+                <address class="contact__val">Agmashenebeli ave. 55 Tbilisi 0102 Georgia</address>
+              </div>
             </div>
-            <h3 class="title">Our property management services include:</h3>
-            <div class="management__list">
-              <ul>
-                <li>Tenant Relations + Retention</li>
-                <li>Business Planning, Accounting + Reporting</li>
-                <li>Lease and Contract Administration</li>
-                <li>Project Management</li>
-                <li>Personnel Training + Quality Assurance</li>
-                <li>Engineering, Mechanical + Preventive Maintenance</li>
-                <li>Energy Conservation + Sustainability</li>
-              </ul>
+            <div class="contact__form">
+              <div class="feed-form__form">
+                <div class="feed-form__send">Send us a message</div>
+                <form action="#" class="form">
+                  <input class="feed-form__name" type="text" name="name" placeholder="Name" required>
+                  <input class="feed-form__email" type="email" name="email" placeholder="Email or phone number"
+                    required>
+                  <textarea class="feed-form__message" name="message" placeholder="Your message"></textarea>
+                  <button class="btn-reset feed-form__btn btn-white">Contact us</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="feed-form"
-      style="background-image: url('img/feed-form-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-      <div class="container">
-        <div class="feed-form__wrap">
-          <div class="feed-form__info">
-            <div class="feed-form__title title">Need Property Management?</div>
-            <div class="feed-form__call">Call Now!
-              <a href="tel:12345678900">+1 234 567 8900</a>
-            </div>
-          </div>
-          <p class="feed-form__or">or</p>
-          <div class="feed-form__form">
-            <div class="feed-form__send">Send us a message</div>
-            <form action="#" class="form">
-              <input class="feed-form__name" type="text" name="name" placeholder="Name" required>
-              <input class="feed-form__email" type="email" name="email" placeholder="Email or phone number" required>
-              <textarea class="feed-form__message" name="message" placeholder="Your message"></textarea>
-              <button class="btn-reset feed-form__btn btn-white">Contact us</button>
-            </form>
-          </div>
-        </div>
-      </div>
+    <section id="map" style="position: relative; overflow: hidden; height: 524px; width: 100%;">
+
     </section>
 
     <footer class="footer">
@@ -187,7 +164,60 @@
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
   </div>
+  <script>
 
+    let cord = ' 41.70605136237982, 44.800357796209795';
+
+    const coord = {
+      lat: Number(cord.split(',')[0]),
+      lng: Number(cord.split(',')[1])
+    };
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: coord,
+        styles: style,
+      });
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: coord,
+        map: map,
+      });
+    }
+
+    const style = [
+      {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+          {
+            "invert_lightness": true
+          },
+          {
+            "saturation": 10
+          },
+          {
+            "lightness": 30
+          },
+          {
+            "gamma": 0.5
+          },
+          {
+            "hue": "#435158"
+          }
+        ]
+      }
+    ]
+    window.initMap = initMap;
+
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS8EX2FYhrN7TL3GgHETCDoD7lTv8fPm8&callback=initMap&v=weekly"
+    defer></script>
   <script defer src="js/main.js"></script>
 </body>
 
