@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <section class="promo articles">
+      <div class="header__container">
+        <div class="social-posit">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="articles__head">
+            <div class="navigation">
+              <ul>
+                <li><a class="selected" href="#">Home</a></li>
+                <li><a href="#">Articles</a></li>
+              </ul>
+            </div>
+            <h2 class="articles__title title">About Georgia</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="articles-slider">
+      <div class="container">
+        <div class="swiper mySwiper4 articles-slider__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <!-- <source srcset="img/articles-img-1.avif" type="image/avif">
+                <source srcset="img/articles-img-1.webp" type="image/webp"> -->
+                <img loading="lazy" src="img/articles-img-1.jpg" class="image" width="" height="" alt="">
+              </picture>
+              <div class="articles-slider__label">
+                <div class="articles-slider__date">Ponderum vivendum • 15.06.2022</div>
+                <div class="articles-slider__text">Ponderum vivendum perpetua eam id, vix liber malorum no.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <!-- <source srcset="img/articles-img-1.avif" type="image/avif">
+                <source srcset="img/articles-img-1.webp" type="image/webp"> -->
+                <img loading="lazy" src="img/articles-img-1.jpg" class="image" width="" height="" alt="">
+              </picture>
+              <div class="articles-slider__label">
+                <div class="articles-slider__date">Ponderum vivendum • 15.06.2022</div>
+                <div class="articles-slider__text">Ponderum vivendum perpetua eam id, vix liber malorum no.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <!-- <source srcset="img/articles-img-1.avif" type="image/avif">
+                <source srcset="img/articles-img-1.webp" type="image/webp"> -->
+                <img loading="lazy" src="img/articles-img-1.jpg" class="image" width="" height="" alt="">
+              </picture>
+              <div class="articles-slider__label">
+                <div class="articles-slider__date">Ponderum vivendum • 15.06.2022</div>
+                <div class="articles-slider__text">Ponderum vivendum perpetua eam id, vix liber malorum no.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <!-- <source srcset="img/articles-img-1.avif" type="image/avif">
+                <source srcset="img/articles-img-1.webp" type="image/webp"> -->
+                <img loading="lazy" src="img/articles-img-1.jpg" class="image" width="" height="" alt="">
+              </picture>
+              <div class="articles-slider__label">
+                <div class="articles-slider__date">Ponderum vivendum • 15.06.2022</div>
+                <div class="articles-slider__text">Ponderum vivendum perpetua eam id, vix liber malorum no.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <!-- <source srcset="img/articles-img-1.avif" type="image/avif">
+                <source srcset="img/articles-img-1.webp" type="image/webp"> -->
+                <img loading="lazy" src="img/articles-img-1.jpg" class="image" width="" height="" alt="">
+              </picture>
+              <div class="articles-slider__label">
+                <div class="articles-slider__date">Ponderum vivendum • 15.06.2022</div>
+                <div class="articles-slider__text">Ponderum vivendum perpetua eam id, vix liber malorum no.</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-btn-next-a"><img src="img/articles-slider-arrow-next.svg" alt="arrow-next"></div>
+          <div class="swiper-btn-prev-a"><img src="img/articles-slider-arrow-prev.svg" alt="arrow-prew"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="feed-form"
+      style="background-image: url('img/feed-form-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="feed-form__wrap">
+          <div class="feed-form__info">
+            <div class="feed-form__title title">Have any questions?</div>
+            <div class="feed-form__call">Call Now!
+              <a href="tel:12345678900">+1 234 567 8900</a>
+            </div>
+          </div>
+          <p class="feed-form__or">or</p>
+          <div class="feed-form__form">
+            <div class="feed-form__send">Send us a message</div>
+            <form action="#" class="form">
+              <input class="feed-form__name" type="text" name="name" placeholder="Name" required>
+              <input class="feed-form__email" type="email" name="email" placeholder="Email or phone number" required>
+              <textarea class="feed-form__message" name="message" placeholder="Your message"></textarea>
+              <button class="btn-reset feed-form__btn btn-white">Contact us</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script>
+    var swiper4 = new Swiper(".mySwiper4", {
+      loop: true,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-btn-next-a",
+        prevEl: ".swiper-btn-prev-a",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script defer src="js/main.js"></script>
+</body>
+
+</html>
