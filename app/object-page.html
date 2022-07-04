@@ -348,7 +348,7 @@
     <section class="similar">
       <div class="container">
         <div class="similar__wrap">
-          <div class="similar__title title">Similar Objects</div>
+          <h2 class="similar__title title">Similar Objects</h2>
           <div class="similar__slider">
             <div class="swiper mySwiper3">
               <div class="swiper-wrapper">
@@ -478,6 +478,7 @@
       <li><a href="partnership.html">Partnership</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="articles.html">Articles</a></li>
+      <li><a href="articles-text.html">Articles-text</a></li>
     </ul>
   </div>
 </footer>
@@ -556,42 +557,7 @@
 
     //Swiper for similar section
 
-    var swiperTwo = new Swiper(".mySwiper3", {
-      watchSlidesProgress: true,
-      loop: true,
-      slidesPerView: 4,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-two-btn-next",
-        prevEl: ".swiper-two-btn-prev",
-      },
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          centeredSlides: true,
-        },
-        // when window width is >= 480px
-        480: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-        // when window width is >= 640px
-        769: {
-          slidesPerView: 3,
-          spaceBetween: 15
-        },
-        993: {
-          slidesPerView: 4,
-          spaceBetween: 30
-        }
-      }
-    });
+
   </script>
   <script defer src="js/main.js"></script>
 </body>
