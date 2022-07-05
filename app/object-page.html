@@ -420,7 +420,9 @@
 
     </section>
 
-    <footer class="footer">
+  </div>
+
+  <footer class="footer">
   <div class="container">
     <div class="footer__wrap">
       <div class="footer__item">
@@ -484,82 +486,8 @@
 </footer>
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script defer src="js/main.js"></script>
 
-  </div>
-
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      spaceBetween: 30,
-      slidesPerView: 6,
-      freeMode: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-        // when window width is >= 480px
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 10
-        },
-        // when window width is >= 640px
-        766: {
-          slidesPerView: 4,
-          spaceBetween: 15
-        },
-        993: {
-          slidesPerView: 6,
-          spaceBetween: 30
-        }
-      }
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-      loop: true,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-btn-next",
-        prevEl: ".swiper-btn-prev",
-      },
-      thumbs: {
-        swiper: swiper,
-      },
-    });
-
-    // Tabs
-
-    let tabs = document.querySelector('.object-info__header'),
-      tabsItem = document.querySelectorAll('.object-info__item'),
-      tabsInfo = document.querySelectorAll('.object-info__box');
-
-    tabs.addEventListener('click', fTabs);
-
-    function fTabs(event) {
-      if (event.target.className == "object-info__item") {
-        //let dataTab = event.target.getAttribute('data-tab');
-        let currentDataTab = event.target.dataset.tab;
-        //console.log(currentDataTab);
-        for (let i = 0; i < tabsItem.length; i++) {
-          tabsItem[i].classList.remove('active');
-        }
-        event.target.classList.add('active');
-        for (let i = 0; i < tabsInfo.length; i++) {
-          if (currentDataTab == i) {
-            tabsInfo[i].classList.add('active');
-          } else {
-            tabsInfo[i].classList.remove('active');
-          }
-        }
-      }
-    }
-
-    //Swiper for similar section
-
-
-  </script>
-  <script defer src="js/main.js"></script>
 </body>
 
 </html>
