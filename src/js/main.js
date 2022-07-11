@@ -16,7 +16,6 @@ function scrollFunction() {
 }
 
 
-
 var swiperTwo = new Swiper(".mySwiper3", {
   watchSlidesProgress: true,
   loop: true,

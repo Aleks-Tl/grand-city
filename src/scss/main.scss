@@ -90,6 +90,7 @@
   &__phone {
     display: flex;
     align-items: center;
+    cursor: pointer;
     span {
       > a {
         font-weight: 500;
@@ -99,9 +100,6 @@
         color: #9B9B9B;
         margin-right: 24px;
         transition: all 0.3s ease 0s;
-        &:hover {
-          color: var(--primary);
-        }
         @media (max-width: 768px) {
           font-size: 14px;
           margin-right: 18px;
@@ -126,6 +124,11 @@
       @media (max-width: 576px) {
         width: 37px;
         height: 37px;
+      }
+    }
+    &:hover span {
+      a {
+        color: var(--primary);
       }
     }
   }
@@ -1432,6 +1435,10 @@
             line-height: 24px;
             color: var(--primary);
             opacity: 0.5;
+            transition: all 0.3s ease 0s;
+            &:hover {
+              opacity: 1;
+            }
             @media (max-width: 992px) {
               font-size: 16px;
               line-height: 20px;
@@ -1488,6 +1495,7 @@
   }
   .mySwiper {
     padding-top: 8px;
+    padding-left: 8px;
   }
   .mySwiper2 {
     position: relative;
@@ -2314,9 +2322,10 @@
             width: 100%;
             max-width: 100% !important;
             display: flex !important;
+            background-color: #17202D;
             .property__img {
                height: auto;
-               flex: 0 1 55%;
+               flex: 0 1 calc(50% + 25px);
                @media (max-width: 768px) {
                 flex-basis: 100%;
                }
@@ -2324,7 +2333,7 @@
             .property__info {
               position: static;
               opacity: 1;
-              flex: 0 1 45%;
+              flex: 0 1 calc(50% + 25px);
               background-color: #17202D;
               @media (max-width: 768px) {
                 position: absolute;

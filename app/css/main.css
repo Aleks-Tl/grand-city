@@ -679,6 +679,7 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
 }
 .header__phone span > a {
   font-weight: 500;
@@ -690,9 +691,6 @@ a {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-.header__phone span > a:hover {
-  color: var(--primary);
 }
 @media (max-width: 768px) {
   .header__phone span > a {
@@ -732,6 +730,9 @@ a {
     width: 37px;
     height: 37px;
   }
+}
+.header__phone:hover span a {
+  color: var(--primary);
 }
 .header__nav {
   position: absolute;
@@ -2377,6 +2378,12 @@ a {
   line-height: 24px;
   color: var(--primary);
   opacity: 0.5;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.object-page__info ul li a:hover {
+  opacity: 1;
 }
 @media (max-width: 992px) {
   .object-page__info ul li a {
@@ -2440,6 +2447,7 @@ a {
 }
 .object-slider .mySwiper {
   padding-top: 8px;
+  padding-left: 8px;
 }
 .object-slider .mySwiper2 {
   position: relative;
@@ -3373,12 +3381,13 @@ a {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  background-color: #17202D;
 }
 .objects-property .property__item:first-child .property__img {
   height: auto;
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 55%;
-  flex: 0 1 55%;
+  -ms-flex: 0 1 calc(50% + 25px);
+  flex: 0 1 calc(50% + 25px);
 }
 @media (max-width: 768px) {
   .objects-property .property__item:first-child .property__img {
@@ -3390,8 +3399,8 @@ a {
   position: static;
   opacity: 1;
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 45%;
-  flex: 0 1 45%;
+  -ms-flex: 0 1 calc(50% + 25px);
+  flex: 0 1 calc(50% + 25px);
   background-color: #17202D;
 }
 @media (max-width: 768px) {
