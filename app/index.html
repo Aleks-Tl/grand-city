@@ -17,19 +17,39 @@
     <header class="header">
   <div class="header__container">
     <div class="header__wrap">
-      <div class="header__burger">
-        <div class="header__burger-wr">
-          <button class="burger" aria-label="Open menu" data-burger>
-            <span class="burger__line"></span>
-          </button>
+
+      <div class="header__burg">
+        <div class="header__burger">
+          <div class="header__burger-wr">
+            <button class="burger" aria-label="Open menu" data-burger>
+              <span class="burger__line"></span>
+            </button>
+          </div>
+          Menu
         </div>
-        Menu
+        <div class="languages">
+          <select name="#" id="languages" class="languages__list">
+            <option value="en" selected>English</option>
+            <option value="ua">Ukrainian</option>
+            <option value="geo">Georgian</option>
+          </select>
+        </div>
       </div>
+
       <a href="#" class="header__logo"><img src="img/logo.svg" alt="Logo"></a>
-      <div class="header__phone">
-        <span><a href="tel:804320000000">+8 44 111-22-33</a></span><a href="tel:804320000000"><img
-            src="img/header-phone.svg" alt="Call now!"></a>
+
+      <div class="header__contacts">
+        <address class="header__location">
+          Batumi, 7b Sherif Khimshiashvili str
+          603 number, 6 floor
+        </address>
+
+        <div class="header__phone">
+          <span><a href="tel:804320000000">+8 44 111-22-33</a></span><a href="tel:804320000000"><img
+              src="img/header-phone.svg" alt="Call now!"></a>
+        </div>
       </div>
+
     </div>
 
   </div>
@@ -44,7 +64,7 @@
   </nav>
 </header>
 
-    <section class="promo">
+    <!-- <section class="promo">
       <div class="header__container">
         <div class="social-posit">
           <ul>
@@ -56,46 +76,46 @@
         <div class="container">
           <div class="promo__wrap">
             <div class="promo__left">
-              <h1 class="promo__title title">Probatus salutatus in mei</h1>
-              <div class="promo__subtitle">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
-                offendit. An sit graeci vidisse vivendum, ei eum.</div>
+              <h1 class="promo__title title">Probatus salutatus in mei</h1>
+              <div class="promo__subtitle">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
+                offendit. An sit graeci vidisse vivendum, ei eum.</div>
               <a class="promo__btn btn btn-reset" href="#">Find property</a>
             </div>
             <picture>
-              <!-- <source srcset="img/promo-image.avif" type="image/avif">
-              <source srcset="img/promo-image.webp" type="image/webp"> -->
-              <!-- <img loading="lazy" src="img/promo-image.jpg" class="image" alt="promo-image"> -->
+              <source srcset="img/promo-image.avif" type="image/avif">
+              <source srcset="img/promo-image.webp" type="image/webp">
+              <img loading="lazy" src="img/promo-image.jpg" class="image" alt="promo-image">
               <img loading="lazy" src="img/team.jpg" class="image" alt="promo-image">
             </picture>
           </div>
 
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="count">
+    <!-- <section class="count">
       <div class="header__container">
         <div class="container">
           <div class="count__wrap">
             <div class="count__img">
-              <h2 class="count__title title">Suas discere cu vix, eos id unum ornatus sensibus</h2>
+              <h2 class="count__title title">Suas discere cu vix, eos id unum ornatus sensibus</h2>
               <div class="count__image">
                 <picture>
-                  <!-- <source srcset="img/count-img.avif" type="image/avif">
-                  <source srcset="img/count-img.webp" type="image/webp"> -->
+                  <source srcset="img/count-img.avif" type="image/avif">
+                  <source srcset="img/count-img.webp" type="image/webp">
                   <img loading="lazy" src="img/count-img.jpg" class="image" alt="count-img">
                 </picture>
               </div>
             </div>
             <div class="count__info">
-              <div class="count__text">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
+              <div class="count__text">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
                 offendit.
-                An sit graeci vidisse vivendum, ei eum commune detraxit maluisset.</div>
+                An sit graeci vidisse vivendum, ei eum commune detraxit maluisset.</div>
               <div class="count__block block-count">
                 <div class="block-count__wrap">
                   <div class="block-count__item">
                     <div class="block-count__num">150+</div>
-                    <div class="block-count__descr">an sit graeci vidisse</div>
+                    <div class="block-count__descr">an sit graeci vidisse</div>
                   </div>
                   <div class="block-count__item">
                     <div class="block-count__num">10k</div>
@@ -119,14 +139,14 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="sensibus"
+    <!-- <section class="sensibus"
       style="background-image: url(img/sensibus-img.jpg); background-position: center; background-size: cover; background-repeat: no-repeat">
       <div class="container">
         <img src="img/mockup_brochure.png" alt="sensubus-img" class="sensibus__img">
         <div class="sensibus__wrap">
-          <h2 class="sensibus__title title">Eos id unum ornatus sensibus</h2>
+          <h2 class="sensibus__title title">Eos id unum ornatus sensibus</h2>
           <a class="sensibus__btn btn btn-reset" href="#" download="">Download Brochure</a>
         </div>
       </div>
@@ -135,37 +155,37 @@
     <div class="select">
       <select>
         <option selected value="New Developments">New Developments</option>
-        <option value="1">Item — 1</option>
-        <option value="2">Item — 2</option>
-        <option value="3">Item — 3</option>
-        <option value="4">Item — 4</option>
+        <option value="1">Item - 1</option>
+        <option value="2">Item - 2</option>
+        <option value="3">Item - 3</option>
+        <option value="4">Item - 4</option>
       </select>
     </div>
     <div class="select">
       <select>
         <option selected value="Areas">Areas</option>
-        <option value="1">Item — 1</option>
-        <option value="2">Item — 2</option>
-        <option value="3">Item — 3</option>
-        <option value="4">Item — 4</option>
+        <option value="1">Item - 1</option>
+        <option value="2">Item - 2</option>
+        <option value="3">Item - 3</option>
+        <option value="4">Item - 4</option>
       </select>
     </div>
     <div class="select">
       <select>
         <option selected value="Price">Price</option>
-        <option value="1">Item — 1</option>
-        <option value="2">Item — 2</option>
-        <option value="3">Item — 3</option>
-        <option value="4">Item — 4</option>
+        <option value="1">Item - 1</option>
+        <option value="2">Item - 2</option>
+        <option value="3">Item - 3</option>
+        <option value="4">Item - 4</option>
       </select>
     </div>
     <input type="search" class="btn-reset form__btn">
   </form>
 </div>
 
-    </section>
+    </section> -->
 
-    <section class="property">
+    <!--  <section class="property">
       <div class="container">
         <div class="property__wrap">
           <div class="property__head">
@@ -182,14 +202,14 @@
             <div class="property__item rent">
               <div class="property__img">
                 <picture>
-                  <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                  <source srcset="img/property-img-1.avif" type="image/avif">
+                  <source srcset="img/property-img-1.webp" type="image/webp">
                   <img loading="lazy" src="img/property-img-1.jpg" alt="property-img">
                 </picture>
               </div>
               <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                <div class="property__name">Cu mei quem sensibus antiopam</div>
+                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
                   quem voluptaria, pro inimicus similique ad.</div>
                 <div class="property__price">$ 123456.00</div>
                 <div class="property__btns">
@@ -201,14 +221,14 @@
             <div class="property__item sale">
               <div class="property__img">
                 <picture>
-                  <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                  <source srcset="img/property-img-1.avif" type="image/avif">
+                  <source srcset="img/property-img-1.webp" type="image/webp">
                   <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
                 </picture>
               </div>
               <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                <div class="property__name">Cu mei quem sensibus antiopam</div>
+                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
                   quem voluptaria, pro inimicus similique ad.</div>
                 <div class="property__price">$ 123456.00</div>
                 <div class="property__btns">
@@ -220,14 +240,14 @@
             <div class="property__item sale">
               <div class="property__img">
                 <picture>
-                  <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                  <source srcset="img/property-img-1.avif" type="image/avif">
+                  <source srcset="img/property-img-1.webp" type="image/webp">
                   <img loading="lazy" src="img/property-img-3.jpg" alt="property-img">
                 </picture>
               </div>
               <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                <div class="property__name">Cu mei quem sensibus antiopam</div>
+                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
                   quem voluptaria, pro inimicus similique ad.</div>
                 <div class="property__price">$ 123456.00</div>
                 <div class="property__btns">
@@ -239,14 +259,14 @@
             <div class="property__item rent">
               <div class="property__img">
                 <picture>
-                  <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                  <source srcset="img/property-img-1.avif" type="image/avif">
+                  <source srcset="img/property-img-1.webp" type="image/webp">
                   <img loading="lazy" src="img/property-img-4.jpg" alt="property-img">
                 </picture>
               </div>
               <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                <div class="property__name">Cu mei quem sensibus antiopam</div>
+                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
                   quem voluptaria, pro inimicus similique ad.</div>
                 <div class="property__price">$ 123456.00</div>
                 <div class="property__btns">
@@ -258,14 +278,14 @@
             <div class="property__item sale">
               <div class="property__img">
                 <picture>
-                  <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                  <source srcset="img/property-img-1.avif" type="image/avif">
+                  <source srcset="img/property-img-1.webp" type="image/webp">
                   <img loading="lazy" src="img/property-img-5.jpg" alt="property-img">
                 </picture>
               </div>
               <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                <div class="property__name">Cu mei quem sensibus antiopam</div>
+                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
                   quem voluptaria, pro inimicus similique ad.</div>
                 <div class="property__price">$ 123456.00</div>
                 <div class="property__btns">
@@ -277,14 +297,14 @@
             <div class="property__item sale">
               <div class="property__img">
                 <picture>
-                  <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                  <source srcset="img/property-img-1.avif" type="image/avif">
+                  <source srcset="img/property-img-1.webp" type="image/webp">
                   <img loading="lazy" src="img/property-img-6.jpg" alt="property-img">
                 </picture>
               </div>
               <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
+                <div class="property__name">Cu mei quem sensibus antiopam</div>
+                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
                   quem voluptaria, pro inimicus similique ad.</div>
                 <div class="property__price">$ 123456.00</div>
                 <div class="property__btns">
@@ -294,7 +314,6 @@
               </div>
             </div>
           </div>
-          <!--  <div class="property__filter filter">
             <div class="filter__item">
               <div class="filter__img">
                 <picture>
@@ -331,88 +350,15 @@
                 </picture>
               </div>
             </div>
-          </div> -->
+          </div>
           <a href="#" class="btn-show btn-reset">Show More</a>
         </div>
-      </div>
-    </section>
-
-    <section class="questions"
-  style="background-image: url('img/questions-img.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; ">
-  <div class="container">
-    <h2 class="questions__title title">Have any questions?</h2>
-    <a href="#" class="questions__btn btn-white btn-reset">Contact us</a>
-  </div>
-</section>
+    </section>  -->
 
   </div>
 
-  <footer class="footer">
-  <div class="container">
-    <div class="footer__wrap">
-      <div class="footer__item">
-        <a href="index.html" class="footer__logo"><img src="img/logo.svg" alt="Footer Logo"></a>
-      </div>
-      <div class="footer__item">
-        <div class="footer__title">Company</div>
-        <nav class="footer__company">
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Objects</a></li>
-            <li><a href="#">Property management</a></li>
-            <li><a href="#">Articles about Georgia</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__item">
-        <div class="footer__title">Follow us</div>
-        <nav class="footer__follow-us">
-          <ul>
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Twitter</a></li>
-            <li><a href="#" target="_blank">Instagram</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__item">
-        <div class="footer__contact">
-          <a href="tel:12345678900" class="footer__phone">+1 234 567 8900</a>
-          <a href="mailto:info@grandcity.com" class="footer__mail">info@grandcity.com</a>
-          <a href="#" class="footer__btn btn btn-reset">Request a Call</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__copy">
-      <div class="copyright">©<span class="year"></span>
-        <script>
-          let today = new Date();
-          let year = today.getFullYear();
-          document.querySelector('.year').innerHTML = year;
-        </script> All Rights Reserved.
-      </div>
-      <a href="https://webcapitan.com" target="_blank" class="webcapitan">Development by Webcapitan TEAM</a>
-    </div>
-  </div>
-  <div class="all_pages">
-    <div class="page_point">Pages</div>
-    <ul class="page_list">
-      <li><a href="index.html">Index</a></li>
-      <li><a href="objects.html">Objects</a></li>
-      <li><a href="object-page.html">Object page</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="management.html">Management</a></li>
-      <li><a href="partnership.html">Partnership</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="articles.html">Articles</a></li>
-      <li><a href="articles-text.html">Articles-text</a></li>
-    </ul>
-  </div>
-</footer>
-
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script defer src="js/main.js"></script>
-
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 
 </html>

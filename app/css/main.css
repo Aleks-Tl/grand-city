@@ -580,6 +580,28 @@ a {
   transition: all 0.3s ease 0s;
   z-index: 99;
 }
+.header__burg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 100px;
+  -moz-column-gap: 100px;
+  column-gap: 100px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header .languages select {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--primary);
+  cursor: pointer;
+}
+.header .languages select option {
+  background-color: #384D68;
+  cursor: pointer;
+}
 .header__wrap {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -19,6 +19,32 @@
 
   &__container {}
 
+  // .header__burg
+
+  &__burg {
+    display: flex;
+    column-gap: 100px;
+    align-items: center;
+  }
+
+  // .languages
+
+  .languages {
+    select {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--primary);
+    cursor: pointer;
+
+    option {
+      background-color: #384D68;
+      cursor: pointer;
+
+    }
+    }
+  }
+
   // .header__wrap
 
   &__wrap {
