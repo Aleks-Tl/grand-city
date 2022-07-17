@@ -478,6 +478,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.onscroll = function () {
   scrollFunction();
+  stickyFilter();
 };
 
 function scrollFunction() {
@@ -637,6 +638,55 @@ if (document.querySelectorAll('.object-info__header').length > 0) {
         }
       }
     }
+  }
+}
+
+if (document.querySelectorAll('.main-filter').length > 0) {
+  const headerNav = document.querySelector('.header__nav'),
+        clientWidth = document.documentElement.clientWidth;
+
+  if (clientWidth <= 1200) {
+    headerNav.append(document.querySelector('.header__location'));
+  }
+
+  if (clientWidth <= 1200) {
+    headerNav.append(document.querySelector('.languages'));
+  }
+
+  $(".js-select2").select2({
+    closeOnSelect: false,
+    placeholder: "City Projects",
+    allowHtml: true,
+    allowClear: true
+  });
+  $(".js-select3").select2({
+    closeOnSelect: false,
+    placeholder: "Project Class",
+    allowHtml: true,
+    allowClear: true
+  });
+  $(".js-select4").select2({
+    closeOnSelect: false,
+    placeholder: "Region",
+    allowHtml: true,
+    allowClear: true
+  });
+}
+
+const btnSearch = document.querySelector('.btn-search'),
+      inputSearch = document.querySelector('.main-search-wr'),
+      mainSearch = document.querySelector('.main-search');
+btnSearch.addEventListener('click', () => {
+  inputSearch.classList.toggle('show');
+}); // Sticky filter
+
+function stickyFilter() {
+  const filterSticky = document.querySelector('.main-filter-wrap');
+
+  if (document.body.scrollTop > document.documentElement.scrollHeight - 1300 || document.documentElement.scrollTop > document.documentElement.scrollHeight - 1300) {
+    filterSticky.classList.add('static');
+  } else {
+    filterSticky.classList.remove('static');
   }
 }
 })();

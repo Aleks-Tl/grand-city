@@ -85,7 +85,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+ // overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 
 .is-hidden {
@@ -269,7 +269,7 @@ a {
   }
 
 }
-.search {
+/* .search {
   background-color: #2A3C54;
   border-radius: 4px;
   width: 100%;
@@ -377,7 +377,7 @@ a {
 
     &__btn {}
   }
-}
+} */
 
 // navigation cat
 .navigation {

@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grandcity</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -47,7 +49,10 @@
         <div class="header__phone">
           <div class="phone__wrap">
             <span><a href="tel:804320000000">+8 44 111-22-33</a></span>
-            <p class="working">We’re working now </p>
+            <div class="span-puls">
+              <span class="mgo-widget-call_pulse"></span>
+              <p class="working">We’re working now </p>
+            </div>
           </div>
           <a href="tel:804320000000"><img src="img/header-phone.svg" alt="Call now!"></a>
         </div>
@@ -64,10 +69,16 @@
       <li><a href="#">Articles about Georgia</a></li>
       <li><a href="#">Partners</a></li>
     </ul>
+    <ul>
+      <li><a href="#" target="_blank" aria-label="Our Facebook page"><img src="img/facebookl.svg" alt=""></a></li>
+      <li><a href="#" target="_blank" aria-label="Our page in Twitter"><img src="img/twitter.svg" alt=""></a></li>
+      <li><a href="#" target="_blank" aria-label="Our page in Instagram"><img src="img/instagram.svg" alt=""></a>
+      </li>
+    </ul>
   </nav>
 </header>
 
-    <!-- <section class="promo">
+    <section class="promo">
       <div class="header__container">
         <div class="social-posit">
           <ul>
@@ -78,47 +89,52 @@
         </div>
         <div class="container">
           <div class="promo__wrap">
-            <div class="promo__left">
-              <h1 class="promo__title title">Probatus salutatus in mei</h1>
-              <div class="promo__subtitle">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
-                offendit. An sit graeci vidisse vivendum, ei eum.</div>
+            <div class="promo__info">
+              <h1 class="promo__title title">Probatus salutatus in</h1>
+              <div class="promo__subtitle">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
+                offendit. An sit graeci vidisse vivendum, ei eum.</div>
               <a class="promo__btn btn btn-reset" href="#">Find property</a>
             </div>
             <picture>
-              <source srcset="img/promo-image.avif" type="image/avif">
-              <source srcset="img/promo-image.webp" type="image/webp">
-              <img loading="lazy" src="img/promo-image.jpg" class="image" alt="promo-image">
-              <img loading="lazy" src="img/team.jpg" class="image" alt="promo-image">
+              <!-- <source srcset="img/promo-image.avif" type="image/avif">
+              <source srcset="img/promo-image.webp" type="image/webp"> -->
+              <!-- <img loading="lazy" src="img/promo-image.jpg" class="image" alt="promo-image"> -->
+              <img loading="lazy" src="img/team.png" class="image" alt="promo-image">
             </picture>
           </div>
 
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="count">
+    <section class="count">
       <div class="header__container">
         <div class="container">
           <div class="count__wrap">
             <div class="count__img">
-              <h2 class="count__title title">Suas discere cu vix, eos id unum ornatus sensibus</h2>
+              <h2 class="count__title title">Suas discere cu vix, eos id unum ornatus sensibus</h2>
               <div class="count__image">
-                <picture>
-                  <source srcset="img/count-img.avif" type="image/avif">
-                  <source srcset="img/count-img.webp" type="image/webp">
-                  <img loading="lazy" src="img/count-img.jpg" class="image" alt="count-img">
-                </picture>
+                <div class="count-img-wrap">
+                  <picture>
+                    <!-- <source srcset="img/count-img.avif" type="image/avif">
+                    <source srcset="img/count-img.webp" type="image/webp"> -->
+                    <img loading="lazy" src="img/founder.png" class="image" alt="count-img">
+                  </picture>
+                </div>
               </div>
             </div>
             <div class="count__info">
-              <div class="count__text">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
+              <div class="count__text">Ut eros ubique libris pri, eum an facilis maiorum vulputate, ut est dolor
                 offendit.
-                An sit graeci vidisse vivendum, ei eum commune detraxit maluisset.</div>
-              <div class="count__block block-count">
+                An sit graeci vidisse vivendum, ei eum commune detraxit maluisset.</div>
+              <div class="count__block block-count" style="background-image: url('img/bg-block-count.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;">
                 <div class="block-count__wrap">
                   <div class="block-count__item">
                     <div class="block-count__num">150+</div>
-                    <div class="block-count__descr">an sit graeci vidisse</div>
+                    <div class="block-count__descr">an sit graeci vidisse</div>
                   </div>
                   <div class="block-count__item">
                     <div class="block-count__num">10k</div>
@@ -134,234 +150,296 @@
                   </div>
                 </div>
                 <div class="block-count__btns">
-                  <a href="#" class="count__btn btn-white btn-reset">Contact Us</a>
-                  <a href="#" class="count__btn btn-outline btn-reset" download="">Download Brochure</a>
+                  <a href="#" class="count__btn btn-white btn-reset">About Us</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="sensibus"
+    <section class="sensibus"
       style="background-image: url(img/sensibus-img.jpg); background-position: center; background-size: cover; background-repeat: no-repeat">
       <div class="container">
         <img src="img/mockup_brochure.png" alt="sensubus-img" class="sensibus__img">
         <div class="sensibus__wrap">
-          <h2 class="sensibus__title title">Eos id unum ornatus sensibus</h2>
+          <h2 class="sensibus__title title">Eos id unum ornatus sensibus</h2>
           <a class="sensibus__btn btn btn-reset" href="#" download="">Download Brochure</a>
         </div>
       </div>
-      <div class="search">
-  <form action="#" class="form-search">
-    <div class="select">
-      <select>
-        <option selected value="New Developments">New Developments</option>
-        <option value="1">Item - 1</option>
-        <option value="2">Item - 2</option>
-        <option value="3">Item - 3</option>
-        <option value="4">Item - 4</option>
-      </select>
-    </div>
-    <div class="select">
-      <select>
-        <option selected value="Areas">Areas</option>
-        <option value="1">Item - 1</option>
-        <option value="2">Item - 2</option>
-        <option value="3">Item - 3</option>
-        <option value="4">Item - 4</option>
-      </select>
-    </div>
-    <div class="select">
-      <select>
-        <option selected value="Price">Price</option>
-        <option value="1">Item - 1</option>
-        <option value="2">Item - 2</option>
-        <option value="3">Item - 3</option>
-        <option value="4">Item - 4</option>
-      </select>
-    </div>
-    <input type="search" class="btn-reset form__btn">
-  </form>
-</div>
+    </section>
 
-    </section> -->
+    <div class="main-filter-wrap">
+      <section class="main-filter">
+        <div class="main-filter__wrap">
+          <div class="part-one">
+            <div class="main-search">
+              <button class="btn-search btn-reset"><img src="img/search.svg" alt="#"></button>
+              <div class="main-search-wr">
+                <input type="search" class="search" placeholder="Search">
+                <!-- <div class="search-close">&times;</div> -->
+              </div>
+            </div>
+            <select class="js-select2" multiple="multiple">
+              <option value="O1" data-badge="">Option1</option>
+              <option value="O2" data-badge="">Option2</option>
+              <option value="O3" data-badge="">Option3</option>
+              <option value="O4" data-badge="">Option4</option>
+              <option value="O5" data-badge="">Option5</option>
+              <option value="O6" data-badge="">Option6</option>
+              <option value="O7" data-badge="">Option7</option>
+              <option value="O8" data-badge="">Option8</option>
+              <option value="O9" data-badge="">Option9</option>
+              <option value="O10" data-badge="">Option10</option>
+              <option value="O11" data-badge="">Option11</option>
+              <option value="O12" data-badge="">Option12</option>
+              <option value="O13" data-badge="">Option13</option>
+            </select>
+            <a href="#" class="on-the-map">Show on Map</a>
+          </div>
+          <div class="part-two">
+            <select class="js-select3" multiple="multiple">
+              <option value="O1" data-badge="">Option1</option>
+              <option value="O2" data-badge="">Option2</option>
+              <option value="O3" data-badge="">Option3</option>
+              <option value="O4" data-badge="">Option4</option>
+              <option value="O5" data-badge="">Option5</option>
+              <option value="O6" data-badge="">Option6</option>
+              <option value="O7" data-badge="">Option7</option>
+              <option value="O8" data-badge="">Option8</option>
+              <option value="O9" data-badge="">Option9</option>
+              <option value="O10" data-badge="">Option10</option>
+              <option value="O11" data-badge="">Option11</option>
+              <option value="O12" data-badge="">Option12</option>
+              <option value="O13" data-badge="">Option13</option>
+            </select>
 
-    <!--  <section class="property">
-      <div class="container">
-        <div class="property__wrap">
-          <div class="property__head">
-            <h2 class="property__title title">Property</h2>
-            <nav class="property__list">
-              <ul>
-                <li data-f="all" class="all active">All property</li>
-                <li data-f="rent" class="rent">For rent</li>
-                <li data-f="sale" class="sale">For sale</li>
-              </ul>
-            </nav>
+            <select class="js-select4" multiple="multiple">
+              <option value="O1" data-badge="">Option1</option>
+              <option value="O2" data-badge="">Option2</option>
+              <option value="O3" data-badge="">Option3</option>
+              <option value="O4" data-badge="">Option4</option>
+              <option value="O5" data-badge="">Option5</option>
+              <option value="O6" data-badge="">Option6</option>
+              <option value="O7" data-badge="">Option7</option>
+              <option value="O8" data-badge="">Option8</option>
+              <option value="O9" data-badge="">Option9</option>
+              <option value="O10" data-badge="">Option10</option>
+              <option value="O11" data-badge="">Option11</option>
+              <option value="O12" data-badge="">Option12</option>
+              <option value="O13" data-badge="">Option13</option>
+            </select>
           </div>
-          <div class="property__content">
-            <div class="property__item rent">
-              <div class="property__img">
-                <picture>
-                  <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-1.jpg" alt="property-img">
-                </picture>
-              </div>
-              <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
-                  quem voluptaria, pro inimicus similique ad.</div>
-                <div class="property__price">$ 123456.00</div>
-                <div class="property__btns">
-                  <a href="#" class="property__btn btn btn-reset">Contact Us</a>
-                  <a href="#" class="property__btn btn-outline btn-reset">Details</a>
-                </div>
-              </div>
-            </div>
-            <div class="property__item sale">
-              <div class="property__img">
-                <picture>
-                  <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
-                </picture>
-              </div>
-              <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
-                  quem voluptaria, pro inimicus similique ad.</div>
-                <div class="property__price">$ 123456.00</div>
-                <div class="property__btns">
-                  <a href="#" class="property__btn btn btn-reset">Contact Us</a>
-                  <a href="#" class="property__btn btn-outline btn-reset">Details</a>
-                </div>
-              </div>
-            </div>
-            <div class="property__item sale">
-              <div class="property__img">
-                <picture>
-                  <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-3.jpg" alt="property-img">
-                </picture>
-              </div>
-              <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
-                  quem voluptaria, pro inimicus similique ad.</div>
-                <div class="property__price">$ 123456.00</div>
-                <div class="property__btns">
-                  <a href="#" class="property__btn btn btn-reset">Contact Us</a>
-                  <a href="#" class="property__btn btn-outline btn-reset">Details</a>
-                </div>
-              </div>
-            </div>
-            <div class="property__item rent">
-              <div class="property__img">
-                <picture>
-                  <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-4.jpg" alt="property-img">
-                </picture>
-              </div>
-              <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
-                  quem voluptaria, pro inimicus similique ad.</div>
-                <div class="property__price">$ 123456.00</div>
-                <div class="property__btns">
-                  <a href="#" class="property__btn btn btn-reset">Contact Us</a>
-                  <a href="#" class="property__btn btn-outline btn-reset">Details</a>
-                </div>
-              </div>
-            </div>
-            <div class="property__item sale">
-              <div class="property__img">
-                <picture>
-                  <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-5.jpg" alt="property-img">
-                </picture>
-              </div>
-              <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
-                  quem voluptaria, pro inimicus similique ad.</div>
-                <div class="property__price">$ 123456.00</div>
-                <div class="property__btns">
-                  <a href="#" class="property__btn btn btn-reset">Contact Us</a>
-                  <a href="#" class="property__btn btn-outline btn-reset">Details</a>
-                </div>
-              </div>
-            </div>
-            <div class="property__item sale">
-              <div class="property__img">
-                <picture>
-                  <source srcset="img/property-img-1.avif" type="image/avif">
-                  <source srcset="img/property-img-1.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-6.jpg" alt="property-img">
-                </picture>
-              </div>
-              <div class="property__info">
-                <div class="property__name">Cu mei quem sensibus antiopam</div>
-                <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
-                  quem voluptaria, pro inimicus similique ad.</div>
-                <div class="property__price">$ 123456.00</div>
-                <div class="property__btns">
-                  <a href="#" class="property__btn btn btn-reset">Contact Us</a>
-                  <a href="#" class="property__btn btn-outline btn-reset">Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-            <div class="filter__item">
-              <div class="filter__img">
-                <picture>
-                  <source srcset="img/property-img-2.avif" type="image/avif">
-                  <source srcset="img/property-img-2.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
-                </picture>
-              </div>
-            </div>
-            <div class="filter__item">
-              <div class="filter__img">
-                <picture>
-                  <source srcset="img/property-img-3.avif" type="image/avif">
-                  <source srcset="img/property-img-3.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-3.jpg" alt="property-img">
-                </picture>
-              </div>
-            </div>
-            <div class="filter__item">
-              <div class="filter__img">
-                <picture>
-                  <source srcset="img/property-img-4.avif" type="image/avif">
-                  <source srcset="img/property-img-4.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-4.jpg" alt="property-img">
-                </picture>
-              </div>
-            </div>
-            <div class="filter__item">
-              <div class="filter__img">
-                <picture>
-                  <source srcset="img/property-img-5.avif" type="image/avif">
-                  <source srcset="img/property-img-5.webp" type="image/webp">
-                  <img loading="lazy" src="img/property-img-5.jpg" alt="property-img">
-                </picture>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="btn-show btn-reset">Show More</a>
         </div>
-    </section>  -->
+      </section>
+    </div>
+
+    <section class="projects">
+      <div class="projects__wrap">
+        <div class="projects__item">
+          <a href="#">
+            <picture>
+              <!-- <source srcset="img/property-big-img-1.avif" type="image/avif">
+              <source srcset="img/property-big-img-1.webp" type="image/webp"> -->
+              <img loading="lazy" src="img/property-big-img-1.jpg" class="image" alt="">
+            </picture>
+            <div class="projects__info">
+              <div class="projects__name">Cu mei quem sensibus antiopam</div>
+              <div class="projects__descr">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu quem
+                voluptaria, pro inimicus similique ad.</div>
+              <div class="projects__price">$ 123456.00</div>
+              <div class="projects__btns">
+                <a href="#" class="projects__btn btn-reset btn">Contact Us</a>
+                <a href="#" class="projects__btn btn-reset btn-outline">Details</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="projects__item">
+          <a href="#">
+            <picture>
+              <!-- <source srcset="img/property-big-img-1.avif" type="image/avif">
+              <source srcset="img/property-big-img-1.webp" type="image/webp"> -->
+              <img loading="lazy" src="img/property-big-img-2.jpg" class="image" alt="">
+            </picture>
+            <div class="projects__info">
+              <div class="projects__name">Cu mei quem sensibus antiopam</div>
+              <div class="projects__descr">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu quem
+                voluptaria, pro inimicus similique ad.</div>
+              <div class="projects__price">$ 123456.00</div>
+              <div class="projects__btns">
+                <a href="#" class="projects__btn btn-reset btn">Contact Us</a>
+                <a href="#" class="projects__btn btn-reset btn-outline">Details</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="projects__item">
+          <a href="#">
+            <picture>
+              <!-- <source srcset="img/property-big-img-1.avif" type="image/avif">
+              <source srcset="img/property-big-img-1.webp" type="image/webp"> -->
+              <img loading="lazy" src="img/property-big-img-3.jpg" class="image" alt="">
+            </picture>
+            <div class="projects__info">
+              <div class="projects__name">Cu mei quem sensibus antiopam</div>
+              <div class="projects__descr">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu quem
+                voluptaria, pro inimicus similique ad.</div>
+              <div class="projects__price">$ 123456.00</div>
+              <div class="projects__btns">
+                <a href="#" class="projects__btn btn-reset btn">Contact Us</a>
+                <a href="#" class="projects__btn btn-reset btn-outline">Details</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="projects__item">
+          <a href="#">
+            <picture>
+              <!-- <source srcset="img/property-big-img-1.avif" type="image/avif">
+              <source srcset="img/property-big-img-1.webp" type="image/webp"> -->
+              <img loading="lazy" src="img/property-big-img-4.jpg" class="image" alt="">
+            </picture>
+            <div class="projects__info">
+              <div class="projects__name">Cu mei quem sensibus antiopam</div>
+              <div class="projects__descr">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu quem
+                voluptaria, pro inimicus similique ad.</div>
+              <div class="projects__price">$ 123456.00</div>
+              <div class="projects__btns">
+                <a href="#" class="projects__btn btn-reset btn">Contact Us</a>
+                <a href="#" class="projects__btn btn-reset btn-outline">Details</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="projects__item">
+          <a href="#">
+            <picture>
+              <!-- <source srcset="img/property-big-img-1.avif" type="image/avif">
+              <source srcset="img/property-big-img-1.webp" type="image/webp"> -->
+              <img loading="lazy" src="img/property-big-img-5.jpg" class="image" alt="">
+            </picture>
+            <div class="projects__info">
+              <div class="projects__name">Cu mei quem sensibus antiopam</div>
+              <div class="projects__descr">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu quem
+                voluptaria, pro inimicus similique ad.</div>
+              <div class="projects__price">$ 123456.00</div>
+              <div class="projects__btns">
+                <a href="#" class="projects__btn btn-reset btn">Contact Us</a>
+                <a href="#" class="projects__btn btn-reset btn-outline">Details</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="projects__item">
+          <a href="#">
+            <picture>
+              <!-- <source srcset="img/property-big-img-1.avif" type="image/avif">
+              <source srcset="img/property-big-img-1.webp" type="image/webp"> -->
+              <img loading="lazy" src="img/property-big-img-1.jpg" class="image" alt="">
+            </picture>
+            <div class="projects__info">
+              <div class="projects__name">Cu mei quem sensibus antiopam</div>
+              <div class="projects__descr">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu quem
+                voluptaria, pro inimicus similique ad.</div>
+              <div class="projects__price">$ 123456.00</div>
+              <div class="projects__btns">
+                <a href="#" class="projects__btn btn-reset btn">Contact Us</a>
+                <a href="#" class="projects__btn btn-reset btn-outline">Details</a>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feed-form"
+      style="background-image: url('img/bg-questions-main.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="feed-form__wrap">
+          <div class="feed-form__info">
+            <div class="feed-form__title title">Have Any Questions?</div>
+            <div class="feed-form__call">Call Now!
+              <a href="tel:12345678900">+1 234 567 8900</a>
+            </div>
+          </div>
+          <p class="feed-form__or">or</p>
+          <div class="feed-form__form">
+            <div class="feed-form__send">Send us a message</div>
+            <form action="#" class="form">
+              <input class="feed-form__name" type="text" name="name" placeholder="Name" required>
+              <input class="feed-form__email" type="email" name="email" placeholder="Email or phone number" required>
+              <textarea class="feed-form__message" name="message" placeholder="Your message"></textarea>
+              <button class="btn-reset feed-form__btn btn-white">Contact us</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
 
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script defer src="js/main.js"></script>
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__wrap">
+      <a href="#" class="footer__logo"><img src="img/logo.svg" alt=""></a>
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Objects</a></li>
+          <li><a href="#">Property management</a></li>
+          <li><a href="#">Articles about Georgia</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <ul>
+          <li><a href="#"><img src="img/icons_facebook-fill.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/icons_twitter-fill.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/icons_linkedin-fill.svg" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="footer__contacts">
+        <a href="tel:8441112233" class="footer__phone">+8 44 111-22-33</a>
+        <a href="mailto:info@grandcity.com" class="footer__mail">info@grandcity.com</a>
+      </div>
+      <div class="footer__btn btn-reset btn">Request a Call</div>
+    </div>
+
+    <div class="footer__copy">
+      <div class="copyright">©<span class="year"></span>
+        <script>
+          let today = new Date();
+          let year = today.getFullYear();
+          document.querySelector('.year').innerHTML = year;
+        </script> All Rights Reserved.
+      </div>
+      <a href="https://webcapitan.com" target="_blank" class="webcapitan">Development by Webcapitan TEAM</a>
+    </div>
+  </div>
+  <!-- <div class="all_pages">
+    <div class="page_point">Pages</div>
+    <ul class="page_list">
+      <li><a href="index.html">Index</a></li>
+      <li><a href="objects.html">Objects</a></li>
+      <li><a href="object-page.html">Object page</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="management.html">Management</a></li>
+      <li><a href="partnership.html">Partnership</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="articles-text.html">Articles-text</a></li>
+    </ul>
+  </div> -->
+</footer>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script defer src="js/main.js"></script>
+
 </body>
 
 </html>

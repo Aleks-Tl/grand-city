@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grandcity</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -47,7 +49,10 @@
         <div class="header__phone">
           <div class="phone__wrap">
             <span><a href="tel:804320000000">+8 44 111-22-33</a></span>
-            <p class="working">We’re working now </p>
+            <div class="span-puls">
+              <span class="mgo-widget-call_pulse"></span>
+              <p class="working">We’re working now </p>
+            </div>
           </div>
           <a href="tel:804320000000"><img src="img/header-phone.svg" alt="Call now!"></a>
         </div>
@@ -63,6 +68,12 @@
       <li><a href="#">Property management</a></li>
       <li><a href="#">Articles about Georgia</a></li>
       <li><a href="#">Partners</a></li>
+    </ul>
+    <ul>
+      <li><a href="#" target="_blank" aria-label="Our Facebook page"><img src="img/facebookl.svg" alt=""></a></li>
+      <li><a href="#" target="_blank" aria-label="Our page in Twitter"><img src="img/twitter.svg" alt=""></a></li>
+      <li><a href="#" target="_blank" aria-label="Our page in Instagram"><img src="img/instagram.svg" alt=""></a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -338,37 +349,28 @@
   <footer class="footer">
   <div class="container">
     <div class="footer__wrap">
-      <div class="footer__item">
-        <a href="index.html" class="footer__logo"><img src="img/logo.svg" alt="Footer Logo"></a>
+      <a href="#" class="footer__logo"><img src="img/logo.svg" alt=""></a>
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Objects</a></li>
+          <li><a href="#">Property management</a></li>
+          <li><a href="#">Articles about Georgia</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <ul>
+          <li><a href="#"><img src="img/icons_facebook-fill.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/icons_twitter-fill.svg" alt=""></a></li>
+          <li><a href="#"><img src="img/icons_linkedin-fill.svg" alt=""></a></li>
+        </ul>
       </div>
-      <div class="footer__item">
-        <div class="footer__title">Company</div>
-        <nav class="footer__company">
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Objects</a></li>
-            <li><a href="#">Property management</a></li>
-            <li><a href="#">Articles about Georgia</a></li>
-          </ul>
-        </nav>
+      <div class="footer__contacts">
+        <a href="tel:8441112233" class="footer__phone">+8 44 111-22-33</a>
+        <a href="mailto:info@grandcity.com" class="footer__mail">info@grandcity.com</a>
       </div>
-      <div class="footer__item">
-        <div class="footer__title">Follow us</div>
-        <nav class="footer__follow-us">
-          <ul>
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Twitter</a></li>
-            <li><a href="#" target="_blank">Instagram</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__item">
-        <div class="footer__contact">
-          <a href="tel:12345678900" class="footer__phone">+1 234 567 8900</a>
-          <a href="mailto:info@grandcity.com" class="footer__mail">info@grandcity.com</a>
-          <a href="#" class="footer__btn btn btn-reset">Request a Call</a>
-        </div>
-      </div>
+      <div class="footer__btn btn-reset btn">Request a Call</div>
     </div>
 
     <div class="footer__copy">
@@ -382,7 +384,7 @@
       <a href="https://webcapitan.com" target="_blank" class="webcapitan">Development by Webcapitan TEAM</a>
     </div>
   </div>
-  <div class="all_pages">
+  <!-- <div class="all_pages">
     <div class="page_point">Pages</div>
     <ul class="page_list">
       <li><a href="index.html">Index</a></li>
@@ -395,9 +397,12 @@
       <li><a href="articles.html">Articles</a></li>
       <li><a href="articles-text.html">Articles-text</a></li>
     </ul>
-  </div>
+  </div> -->
 </footer>
 
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script defer src="js/main.js"></script>
 
