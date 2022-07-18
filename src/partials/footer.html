@@ -22,7 +22,7 @@
         <a href="tel:8441112233" class="footer__phone">+8 44 111-22-33</a>
         <a href="mailto:info@grandcity.com" class="footer__mail">info@grandcity.com</a>
       </div>
-      <div class="footer__btn btn-reset btn">Request a Call</div>
+      <a href="#" class="footer__btn btn-reset btn">Request a Call</a>
     </div>
 
     <div class="footer__copy">
@@ -52,8 +52,53 @@
   </div> -->
 </footer>
 
+
+
+
+<div class="modal">
+  <div class="overlay">
+    <div class="popup">
+      <h2 class="popup__h2">Find Property</h2>
+      <form action="#" class="form">
+        <label for="modal-name" class="modal-name-label"><span>Name</span>
+          <input id="modal-name" type="text" name="name" class="modal__name" placeholder="Your name" value="John Smith">
+        </label>
+        <label for="modal-phone">
+          <input id="modal-phone" type="tel" name="phone" class="modal__phone" placeholder="Phone number">
+        </label>
+        <div class="modal__select">
+          <select name="modal-select" id="modal-select">
+            <option value="" selected>Property type</option>
+            <option value="value1">Value - 1</option>
+            <option value="value2">Value - 2</option>
+            <option value="value3">Value - 3</option>
+          </select>
+        </div>
+        <div class="modal-name-price">Price range</div>
+        <div class="buttons">
+          <input label="40000-70000" type="radio" name="price-range" value="40000-70000" checked>
+          <input label="70000-100000" type="radio" name="price-range" value="70000-100000">
+          <input label="100000+" type="radio" name="price-range" value="100000+">
+        </div>
+        <input type="submit" value="Contact us" class="modal__btn btn-reset btn-white">
+      </form>
+      <div class="close-popup"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-successfully">
+  <div class="overlay">
+    <div class="popup-successfully">
+      <div class="modal-successfully__text">
+        Your request successfully send. Our manager will contact you during 10 minutes.
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script defer src="js/main.js"></script>
+<script src="js/main.js"></script>

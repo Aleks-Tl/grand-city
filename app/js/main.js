@@ -481,6 +481,10 @@ window.onscroll = function () {
   stickyFilter();
 };
 
+window.onresize = function () {
+  transformAddressHeader();
+};
+
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     document.querySelector('header').classList.add('fixedMenu');
@@ -642,17 +646,6 @@ if (document.querySelectorAll('.object-info__header').length > 0) {
 }
 
 if (document.querySelectorAll('.main-filter').length > 0) {
-  const headerNav = document.querySelector('.header__nav'),
-        clientWidth = document.documentElement.clientWidth;
-
-  if (clientWidth <= 1200) {
-    headerNav.append(document.querySelector('.header__location'));
-  }
-
-  if (clientWidth <= 1200) {
-    headerNav.append(document.querySelector('.languages'));
-  }
-
   $(".js-select2").select2({
     closeOnSelect: false,
     placeholder: "City Projects",
@@ -689,6 +682,42 @@ function stickyFilter() {
     filterSticky.classList.remove('static');
   }
 }
+
+function transformAddressHeader() {
+  const headerNav = document.querySelector('.header__nav'),
+        headerContacts = document.querySelector('.header__contacts'),
+        headerBurg = document.querySelector('.header__burg'),
+        clientWidth = document.documentElement.clientWidth;
+
+  if (clientWidth <= 1200) {
+    headerNav.append(document.querySelector('.header__location'));
+  } else {
+    headerContacts.prepend(document.querySelector('.header__location'));
+  }
+
+  if (clientWidth <= 1200) {
+    headerNav.append(document.querySelector('.languages'));
+  } else {
+    headerBurg.append(document.querySelector('.languages'));
+  }
+} // Вызов модального окна
+
+
+$('.button').click(function () {
+  $('.overlay').fadeIn();
+}); // Закрытие окна на крестик
+
+$('.close-popup').click(function () {
+  $('.overlay').fadeOut();
+}); // Закрытие окна на поле
+
+$(document).mouseup(function (e) {
+  var popup = $('.popup');
+
+  if (e.target != popup[0] && popup.has(e.target).length === 0) {
+    $('.overlay').fadeOut();
+  }
+});
 })();
 
 /******/ })()
