@@ -502,10 +502,10 @@
 
 .promo {
   padding-top: 150px;
-  //background-image: url('../img/promo-bg.svg');
-  //background-repeat: no-repeat;
-  //background-size: contain;
-  //background-position: right center;
+  background-image: url('../img/promo-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
   // .promo__wrap
   .header__container {
     @media (max-width: 480px) {
@@ -2066,9 +2066,11 @@
     }
     input {
       margin-bottom: 15px;
+      border-radius: 0;
     }
     textarea {
       resize: none;
+      border-radius: 0;
     }
     @media (max-width: 576px) {
       margin-top: 20px;
@@ -4082,6 +4084,9 @@
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      select {
+        font-size: 16px;
+      }
     }
 }
 .main-search {
@@ -4358,6 +4363,14 @@
     min-width: 80px;
     font-size: 11px;
     margin-left: 0px;
+  }
+  input {
+    font-size: 16px;
+  }
+  &:last-child {
+    &:after {
+      left: 95%;
+    }
   }
 }
 }
@@ -4859,8 +4872,9 @@
 
   &__btn {
     align-self: flex-start;
-    max-width: fit-content;
+    max-width: max-content;
     justify-self: end;
+    padding: 18px 25px;
     @media (max-width: 1400px) {
       padding-left: 20px;
       padding-right: 20px;

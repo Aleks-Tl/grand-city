@@ -261,6 +261,7 @@ a {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border: 2px solid var(--btnBg);
+  text-transform: uppercase;
 }
 .btn:hover {
   -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -290,6 +291,7 @@ a {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   display: inline-block;
+  text-transform: uppercase;
 }
 .btn-white:hover {
   background: transparent;
@@ -319,6 +321,7 @@ a {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  text-transform: uppercase;
 }
 .btn-outline:hover {
   color: #2C394A;
@@ -1227,6 +1230,10 @@ a {
 
 .promo {
   padding-top: 150px;
+  background-image: url("../img/promo-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
 }
 @media (max-width: 480px) {
   .promo .header__container {
@@ -3069,9 +3076,11 @@ a {
 }
 .feed-form .form input {
   margin-bottom: 15px;
+  border-radius: 0;
 }
 .feed-form .form textarea {
   resize: none;
+  border-radius: 0;
 }
 @media (max-width: 576px) {
   .feed-form .form {
@@ -5195,6 +5204,9 @@ a {
   align-items: center;
   height: 100%;
 }
+.main-filter .main-filter__wrap select {
+  font-size: 16px;
+}
 .main-filter .main-search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5562,6 +5574,12 @@ a {
     font-size: 11px;
     margin-left: 0px;
   }
+}
+.main-filter .select2 input {
+  font-size: 16px;
+}
+.main-filter .select2:last-child:after {
+  left: 95%;
 }
 
 .selection {
@@ -6176,11 +6194,12 @@ a {
 .footer__btn {
   -ms-flex-item-align: start;
   align-self: flex-start;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   -ms-grid-column-align: end;
   justify-self: end;
+  padding: 18px 25px;
 }
 @media (max-width: 1400px) {
   .footer__btn {

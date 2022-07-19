@@ -475,15 +475,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  window.onscroll = function () {
+    scrollFunction();
+    stickyFilter();
+  };
 
-window.onscroll = function () {
-  scrollFunction();
-  stickyFilter();
-};
-
-window.onresize = function () {
-  transformAddressHeader();
-};
+  window.onresize = function () {
+    transformAddressHeader();
+  };
+});
 
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {

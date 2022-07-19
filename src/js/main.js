@@ -3,14 +3,17 @@ import vars from './_vars';
 import './_functions';
 import './_components';
 
-window.onscroll = function () {
-  scrollFunction();
-  stickyFilter();
-};
+document.addEventListener("DOMContentLoaded", function () {
+  window.onscroll = function () {
+    scrollFunction();
+    stickyFilter();
+  };
 
-window.onresize = function () {
-  transformAddressHeader();
-}
+  window.onresize = function () {
+    transformAddressHeader();
+  }
+});
+
 
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
