@@ -68,10 +68,10 @@ __webpack_require__.r(__webpack_exports__);
 (function () {
   var _document, _document2;
 
-  const burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('[data-burger]');
+  const burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('.header__burger');
   const menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]');
   burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', e => {
-    burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger--active');
+    burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger__header--active');
     menu === null || menu === void 0 ? void 0 : menu.classList.toggle('menu--active');
   });
 })();
@@ -476,21 +476,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  window.onscroll = function () {
-    scrollFunction();
-    stickyFilter();
-  };
-
-  window.onresize = function () {
-    transformAddressHeader();
-  };
+  transformAddressHeader();
 });
 
+window.onscroll = function () {
+  scrollFunction();
+  stickyFilter();
+};
+
+window.onresize = function () {
+  transformAddressHeader();
+};
+
 function scrollFunction() {
+  let clientWidth = document.documentElement.clientWidth;
+
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.querySelector('.header__logo').classList.add('scroll');
+    document.querySelector('.header__logo-scroll').classList.add('scroll');
     document.querySelector('header').classList.add('fixedMenu');
+
+    if (clientWidth >= 1200) {
+      document.querySelector('.languages').classList.add('scrolloc');
+      document.querySelector('.header__contacts address').classList.add('scrolloc');
+    }
   } else {
+    document.querySelector('.header__logo').classList.remove('scroll');
+    document.querySelector('.header__logo-scroll').classList.remove('scroll');
     document.querySelector('header').classList.remove('fixedMenu');
+
+    if (clientWidth >= 1200) {
+      document.querySelector('.languages').classList.remove('scrolloc');
+      document.querySelector('.header__contacts address').classList.remove('scrolloc');
+    }
   }
 }
 
