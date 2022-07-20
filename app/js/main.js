@@ -693,7 +693,7 @@ btnSearch.addEventListener('click', () => {
 }); // Sticky filter
 
 function stickyFilter() {
-  const filterSticky = document.querySelector('.main-filter-wrap');
+  const filterSticky = document.querySelector('.main-filter');
 
   if (document.body.scrollTop > document.documentElement.scrollHeight - 1300 || document.documentElement.scrollTop > document.documentElement.scrollHeight - 1300) {
     filterSticky.classList.add('static');
