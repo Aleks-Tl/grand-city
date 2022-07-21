@@ -1309,6 +1309,9 @@ a {
   background-size: 1032px 692px;
   background-position: 97% 20%;
 }
+.promo.objects {
+  background-image: none;
+}
 @media (max-width: 1200px) {
   .promo {
     background-size: 80%;

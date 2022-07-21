@@ -565,6 +565,9 @@
   background-repeat: no-repeat;
   background-size: 1032px 692px;
   background-position: 97% 20%;
+  &.objects {
+    background-image: none;
+  }
   @media (max-width: 1200px) {
     background-size: 80%;
     background-position: 90% 10%;
