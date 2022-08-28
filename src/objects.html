@@ -22,18 +22,16 @@
               <div class="navigation">
                 <ul>
                   <li><a class="selected" href="#">Home</a></li>
-                  <li><a href="#">Property</a></li>
+                  <li><a href="#">Projects</a></li>
                 </ul>
               </div>
-              <h1 class="objects__title title">Property</h1>
+              <h1 class="objects__title title">Projects</h1>
             </div>
-            <a href="#" class="objects__filter">Filter</a>
           </div>
           <!-- @include('partials/search.html') -->
         </div>
       </div>
     </section>
-
 
     <section class="objects-property">
       <div class="property">
@@ -48,34 +46,131 @@
                 </ul>
               </nav>
             </div>
+            <div class="objects-property__filter">
+              <div class="objects-property__select">
+                <select name="location" id="location">
+                  <option value="" selected>Location</option>
+                  <option value="value-1">Value - 1</option>
+                  <option value="value-2">Value - 2</option>
+                  <option value="value-3">Value - 3</option>
+                  <option value="value-4">Value - 4</option>
+                </select>
+              </div>
+              <div class="objects-property__select">
+                <select name="Price" id="Price">
+                  <option value="" selected>Price</option>
+                  <option value="value-1">Value - 1</option>
+                  <option value="value-2">Value - 2</option>
+                  <option value="value-3">Value - 3</option>
+                  <option value="value-4">Value - 4</option>
+                </select>
+              </div>
+              <div class="objects-property__select">
+                <select name="date" id="date">
+                  <option value="" selected>Completion Date</option>
+                  <option value="value-1">Value - 1</option>
+                  <option value="value-2">Value - 2</option>
+                  <option value="value-3">Value - 3</option>
+                  <option value="value-4">Value - 4</option>
+                </select>
+              </div>
+              <div class="objects-property__select">
+                <select name="area" id="area">
+                  <option value="" selected>Apartment Area</option>
+                  <option value="value-1">Value - 1</option>
+                  <option value="value-2">Value - 2</option>
+                  <option value="value-3">Value - 3</option>
+                  <option value="value-4">Value - 4</option>
+                </select>
+              </div>
+              <div class="objects-property__select">
+                <select name="finishing" id="finishing">
+                  <option value="" selected>Finishing</option>
+                  <option value="value-1">Value - 1</option>
+                  <option value="value-2">Value - 2</option>
+                  <option value="value-3">Value - 3</option>
+                  <option value="value-4">Value - 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="objects-property__best">
+              <div class="objects-property__slider">
+                <div class="swiper mySwiper objects-property-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="objects-property__img"><img src="img/property-top-img.jpg" alt=""></div>
+                      <img src="img/badge-best-offer.png" alt="" class="objects-property__bage">
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="objects-property__img"><img src="img/property-top-img.jpg" alt=""></div>
+                      <img src="img/badge-best-offer.png" alt="" class="objects-property__bage">
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="objects-property__img"><img src="img/property-top-img.jpg" alt=""></div>
+                      <img src="img/badge-best-offer.png" alt="" class="objects-property__bage">
+                    </div>
+                  </div>
+                  <div class="objects-property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt=""></div>
+                  <div class="objects-property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt=""></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="objects-property__info">
+                <div class="objects-property__name">Cu mei quem sensibus</div>
+                <div class="objects-property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam.
+                  Nam cu quem voluptaria, pro inimicus similique ad.</div>
+                <div class="objects-property__information">
+                  <div class="objects-property__date">
+                    <div class="objects-property__head">Completion Date</div>
+                    <div class="objects-property__footer">01.09.2022</div>
+                  </div>
+                  <div class="objects-property__finishing">
+                    <div class="objects-property__head">Finishing</div>
+                    <div class="objects-property__footer">Wood, lacquered metal</div>
+                  </div>
+                  <div class="objects-property__area">
+                    <div class="objects-property__head">Area</div>
+                    <div class="objects-property__footer">110 sq. m</div>
+                  </div>
+                  <div class="objects-property__floors">
+                    <div class="objects-property__head">Floors</div>
+                    <div class="objects-property__footer">18</div>
+                  </div>
+                </div>
+                <div class="objects-property__price">$ 123456.00</div>
+                <div class="objects-property__btns">
+                  <a href="#" class="objects-property__btn btn btn-reset">Contact Us</a>
+                  <a href="#" class="objects-property__btn btn-outline btn-reset">Details</a>
+                </div>
+              </div>
+            </div>
             <div class="property__content">
-              <div class="property__item owner">
-                <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-top-img.jpg" alt="property-img">
-                  </picture>
-                </div>
-                <div class="property__info">
-                  <div class="property__name">Cu mei quem sensibus antiopam</div>
-                  <div class="property__text">Saepe volutpat eum cu. Cum liber possit eu. His at lorem aliquam. Nam cu
-                    quem voluptaria, pro inimicus similique ad.</div>
-                  <div class="property__price">$ 123456.00</div>
-                  <div class="property__btns">
-                    <a href="#" class="property__btn btn btn-reset">Contact Us</a>
-                    <a href="#" class="property__btn btn-outline btn-reset">Details</a>
-                  </div>
-                </div>
-                <img src="img/badge-best-offer.png" alt="bage" class="badge">
-              </div>
               <div class="property__item developer">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-2.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-2.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-2.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
                     <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
-                  </picture>
+                  </picture> -->
+
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -87,14 +182,33 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
               <div class="property__item owner">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-img-3.jpg" alt="property-img">
-                  </picture>
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-3.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-3.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture> -->
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -106,14 +220,34 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
               <div class="property__item owner">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-img-4.jpg" alt="property-img">
-                  </picture>
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-4.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-4.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-4.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture> -->
+
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -125,14 +259,34 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
               <div class="property__item developer">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-img-5.jpg" alt="property-img">
-                  </picture>
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-5.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-5.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-5.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture> -->
+
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -144,14 +298,34 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
               <div class="property__item owner">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-img-6.jpg" alt="property-img">
-                  </picture>
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-6.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-6.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-6.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture> -->
+
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -163,14 +337,34 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
               <div class="property__item developer">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-img-7.jpg" alt="property-img">
-                  </picture>
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-7.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-7.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-7.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture> -->
+
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -182,14 +376,34 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
               <div class="property__item owner">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-img-3.jpg" alt="property-img">
-                  </picture>
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-3.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-3.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture> -->
+
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -201,14 +415,34 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
               <div class="property__item developer">
                 <div class="property__img">
-                  <picture>
-                    <!-- <source srcset="img/property-img-1.avif" type="image/avif">
-                    <source srcset="img/property-img-1.webp" type="image/webp"> -->
-                    <img loading="lazy" src="img/property-img-5.jpg" alt="property-img">
-                  </picture>
+                  <div class="swiper mySwiper property-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-2.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-2.jpg" alt=""></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="objects-property__img"><img src="img/property-img-2.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="property-slider-next"><img src="img/articles-slider-arrow-next.svg" alt="">
+                    </div>
+                    <div class="property-slider-prev"><img src="img/articles-slider-arrow-prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- <picture>
+                    <source srcset="img/property-img-1.avif" type="image/avif">
+                    <source srcset="img/property-img-1.webp" type="image/webp">
+                    <img loading="lazy" src="img/property-img-2.jpg" alt="property-img">
+                  </picture> -->
+
                 </div>
                 <div class="property__info">
                   <div class="property__name">Cu mei quem sensibus antiopam</div>
@@ -220,6 +454,7 @@
                     <a href="#" class="property__btn btn-outline btn-reset">Details</a>
                   </div>
                 </div>
+                <div class="btn-info"><img src="img/information.svg" alt=""></div>
               </div>
             </div>
             <!--  <div class="property__filter filter">
@@ -266,9 +501,14 @@
       </div>
     </section>
 
-    @include('partials/questions.html')
 
-
+    <section class="questions"
+      style="background-image: url('img/questions-img.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; ">
+      <div class="container">
+        <h2 class="questions__title title">Have any questions?</h2>
+        <a href="#" class="questions__btn btn-white btn-reset">Contact us</a>
+      </div>
+    </section>
 
   </div>
 
