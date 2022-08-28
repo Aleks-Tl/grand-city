@@ -4476,10 +4476,14 @@
 .similar {
   padding-top: 100px;
   padding-bottom: 120px;
+  @media (max-width: 1530px) {
+    overflow: hidden;
+  }
   @media (max-width: 576px) {
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
+
 
   // .similar__wrap
 
@@ -4549,6 +4553,9 @@
 
   .swiper {
     overflow: visible;
+    @media (max-width: 1530px) {
+      overflow: hidden !important;
+    }
   }
   .swiper-pagination-bullet {
     width: 30px;

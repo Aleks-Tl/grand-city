@@ -5948,10 +5948,15 @@ a {
   padding-top: 100px;
   padding-bottom: 120px;
 }
+@media (max-width: 1530px) {
+  .similar {
+    overflow: hidden;
+  }
+}
 @media (max-width: 576px) {
   .similar {
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 }
 .similar__wrap {
@@ -6020,6 +6025,11 @@ a {
 }
 .similar .swiper {
   overflow: visible;
+}
+@media (max-width: 1530px) {
+  .similar .swiper {
+    overflow: hidden !important;
+  }
 }
 .similar .swiper-pagination-bullet {
   width: 30px;
