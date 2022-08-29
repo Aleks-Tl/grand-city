@@ -2111,7 +2111,6 @@ a {
 .feed-form__or {
   color: var(--primary);
   padding: 40px;
-  background-color: #27507F;
   border-radius: 100%;
 }
 @media (max-width: 1200px) {
@@ -2252,7 +2251,7 @@ a {
   background-color: var(--primary);
   position: sticky;
   top: 77px;
-  z-index: 20;
+  z-index: 90;
 }
 .main-filter.static {
   position: static;

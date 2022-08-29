@@ -1238,7 +1238,7 @@
   &__or {
     color: var(--primary);
     padding: 40px;
-    background-color: #27507F;
+    //background-color: #27507F;
     border-radius: 100%;
     @media (max-width: 1200px) {
       padding: 20px;
@@ -1344,7 +1344,7 @@
   //padding-right: 40px;
   position: sticky;
   top: 77px;
-  z-index: 20;
+  z-index: 90;
   &.static {
     position: static;
   }

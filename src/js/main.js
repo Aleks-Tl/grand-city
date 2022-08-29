@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   transformAddressHeader();
 });
 
-if (document.querySelectorAll('.main-filter') > 0) {
+if (document.querySelectorAll('.main-filter').length > 0) {
 
   function stickyFilter() {
     const filterSticky = document.querySelector('.main-filter');
@@ -55,6 +55,7 @@ function scrollFunction() {
     }
   }
 }
+
 
 
 var swiperTwo = new Swiper(".mySwiper3", {
@@ -259,7 +260,7 @@ if (document.querySelectorAll('.main-filter').length > 0) {
   });
 }
 
-if (document.querySelectorAll('.btn-searh') > 0) {
+if (document.querySelectorAll('.main-search').length > 0) {
   const btnSearch = document.querySelector('.btn-search'),
     inputSearch = document.querySelector('.main-search-wr'),
     mainSearch = document.querySelector('.main-search');
