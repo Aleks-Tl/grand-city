@@ -108,6 +108,19 @@ var swiper4 = new Swiper(".mySwiper4", {
   },
 });
 
+// Slider for object-page-slider
+var swiper10 = new Swiper(".mySwiper10", {
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".object-page-slider-next-a",
+    prevEl: ".object-page-slider-prev-a",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
 // Filter
 

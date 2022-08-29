@@ -574,6 +574,19 @@ var swiper4 = new Swiper(".mySwiper4", {
     el: ".swiper-pagination",
     clickable: true
   }
+}); // Slider for object-page-slider
+
+var swiper10 = new Swiper(".mySwiper10", {
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".object-page-slider-next-a",
+    prevEl: ".object-page-slider-prev-a"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
 }); // Filter
 
 if (document.querySelectorAll('.property__item').length > 0) {
