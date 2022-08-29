@@ -1979,6 +1979,17 @@ a {
   text-transform: none;
   padding: 19px 86px;
 }
+@media (max-width: 768px) {
+  .questions__btn {
+    padding: 12px 30px !important;
+  }
+}
+@media (max-width: 576px) {
+  .questions__btn {
+    padding: 12px 15px !important;
+    font-size: 14px !important;
+  }
+}
 @media (max-width: 576px) {
   .questions__btn {
     margin-top: 25px;
@@ -3623,7 +3634,7 @@ a {
 }
 @media (max-width: 576px) {
   .objects-property .property__btn:first-child {
-    margin-right: 15px;
+    margin-right: 15px !important;
   }
 }
 .objects-property .property__btn:first-child:hover {
@@ -3631,14 +3642,14 @@ a {
 }
 @media (max-width: 1300px) {
   .objects-property .property__btn {
-    padding: 7px 25px;
-    font-size: 13px;
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
+    padding: 5px 25px !important;
+    font-size: 13px !important;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
   }
   .objects-property .property__btn:first-child {
-    margin-right: 15px;
+    margin-right: 15px !important;
     /* @media (max-width: 576px) {
       margin-right: 15px;
     } */
@@ -4176,15 +4187,15 @@ a {
 }
 @media (max-width: 1550px) {
   .objects-property__btn {
-    margin-right: 15px;
-    padding: 15px 25px;
-    font-size: 14px;
+    margin-right: 15px !important;
+    padding: 15px 25px !important;
+    font-size: 14px !important;
   }
 }
 @media (max-width: 576px) {
   .objects-property__btn {
-    padding: 5px 15px;
-    font-size: 13px;
+    padding: 5px 15px !important;
+    font-size: 13px !important;
   }
 }
 .objects-property .objects-property-slider .swiper-slide {
