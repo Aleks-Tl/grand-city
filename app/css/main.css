@@ -3100,16 +3100,16 @@ a {
     bottom: 15px;
   }
 }
-.projects__btn:nth-child(2) {
+.projects__btn:nth-child(1) {
   margin-right: 24px;
   padding: 15px 37px;
 }
 @media (max-width: 992px) {
-  .projects__btn:nth-child(2) {
+  .projects__btn:nth-child(1) {
     margin-right: 15px;
   }
 }
-.projects__btn:nth-child(3) {
+.projects__btn:nth-child(2) {
   padding: 15px 58px;
 }
 @media (max-width: 1400px) {
