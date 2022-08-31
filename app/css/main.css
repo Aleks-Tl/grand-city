@@ -1996,6 +1996,12 @@ a {
   padding-top: 95px;
   padding-bottom: 95px;
 }
+@media (max-width: 992px) {
+  .feed-form {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 @media (max-width: 576px) {
   .feed-form {
     padding-top: 50px;
@@ -2110,6 +2116,7 @@ a {
 @media (max-width: 768px) {
   .feed-form__form {
     max-width: 100%;
+    width: 100% !important;
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
@@ -2226,7 +2233,7 @@ a {
 }
 .feed-form .form input {
   margin-bottom: 15px;
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 .feed-form .form textarea {
   resize: none;
@@ -6116,6 +6123,7 @@ a {
 .similar {
   padding-top: 100px;
   padding-bottom: 120px;
+  overflow-x: hidden;
 }
 @media (max-width: 1530px) {
   .similar {
@@ -7123,6 +7131,7 @@ a {
   font-weight: 400;
   line-height: 30px;
   color: var(--primary);
+  margin-bottom: 20px;
 }
 @media (max-width: 1300px) {
   .partnership__content p {
@@ -7284,12 +7293,24 @@ a {
 .partnership__item2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40px calc(100% - 40px);
-  grid-template-columns: 40px calc(100% - 40px);
+  -ms-grid-columns: 64px calc(100% - 40px);
+  grid-template-columns: 64px calc(100% - 40px);
   -webkit-column-gap: 24px;
   -moz-column-gap: 24px;
   column-gap: 24px;
   padding-right: 20px;
+}
+@media (max-width: 1200px) {
+  .partnership__item2 {
+    -ms-grid-columns: 50px calc(100% - 40px);
+    grid-template-columns: 50px calc(100% - 40px);
+  }
+}
+@media (max-width: 992px) {
+  .partnership__item2 {
+    -ms-grid-columns: 40px calc(100% - 40px);
+    grid-template-columns: 40px calc(100% - 40px);
+  }
 }
 .partnership__item2 p {
   padding: 0;
@@ -7298,6 +7319,11 @@ a {
   font-size: 20px;
   line-height: 30px;
   color: var(--primary);
+}
+@media (max-width: 1200px) {
+  .partnership__item2 p {
+    font-size: 18px;
+  }
 }
 @media (max-width: 992px) {
   .partnership__item2 p {
@@ -7585,6 +7611,10 @@ a {
     margin-bottom: 10px;
   }
 }
+.feed-form .form #modal-name,
+.feed-form .form #modal-phone {
+  border-radius: 4px !important;
+}
 .feed-form .form input[type=submit] {
   font-weight: 500;
   line-height: 18px;
@@ -7601,6 +7631,7 @@ a {
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin-top: 32px;
+  border-radius: 4px !important;
 }
 .feed-form .form input[type=submit]:hover {
   background: transparent;
@@ -7615,6 +7646,7 @@ a {
   .feed-form .form input[type=submit] {
     padding: 8px 15px;
     margin-top: 10px;
+    margin: 10px auto 0 auto;
   }
 }
 @media (max-width: 576px) {
@@ -7634,7 +7666,7 @@ a {
 }
 @media (max-width: 768px) {
   .feed-form .form {
-    margin-top: 0px;
+    margin-top: 20px;
   }
 }
 .feed-form .modal-name-label span {
@@ -7688,7 +7720,8 @@ a {
   position: relative;
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 20px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .feed-form select {
@@ -7708,6 +7741,23 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
+}
+@media (max-width: 992px) {
+  .feed-form .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  .feed-form .buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 @media (max-width: 768px) {
   .feed-form .buttons {
@@ -7731,6 +7781,7 @@ a {
   padding: 16px 0;
   background-color: #259BD8;
   color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px !important;
 }
 .feed-form .buttons {
   position: relative;
@@ -7755,14 +7806,12 @@ a {
 }
 @media (max-width: 768px) {
   .feed-form .buttons input {
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 10px 0 !important;
   }
 }
 @media (max-width: 576px) {
   .feed-form .buttons input {
-    padding: 10px 0;
-    font-size: 12px;
+    padding: 10px 0 !important;
   }
 }
 .feed-form .buttons input:checked {
