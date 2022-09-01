@@ -6184,6 +6184,12 @@ a {
   font-size: 24px;
   line-height: 36px;
   color: var(--primary);
+  padding-right: 25px;
+}
+@media (max-width: 1270px) {
+  .about-count__text {
+    padding-right: 0;
+  }
 }
 @media (max-width: 768px) {
   .about-count__text {
@@ -6243,6 +6249,7 @@ a {
   margin: 0 auto;
   padding: 35px;
   background-color: var(--blueBg);
+  text-align: center;
 }
 @media (max-width: 1200px) {
   .about-count__items {
@@ -6407,8 +6414,8 @@ a {
   width: 50px;
   height: 40px;
   position: absolute;
-  right: 13px;
-  bottom: 28px;
+  right: 45px;
+  bottom: 45px;
   z-index: 99;
   cursor: pointer;
 }
@@ -6417,6 +6424,7 @@ a {
     width: 30px;
     height: auto;
     bottom: 15px;
+    right: 25px;
   }
 }
 @media (max-width: 992px) {
@@ -6437,8 +6445,8 @@ a {
   position: absolute;
   width: 50px;
   height: 40px;
-  left: 13px;
-  bottom: 28px;
+  left: 45px;
+  bottom: 52px;
   z-index: 10;
   cursor: pointer;
   z-index: 99;
@@ -6447,6 +6455,7 @@ a {
   .meet-team .object-page-slider-prev-a {
     width: 30px;
     height: auto;
+    left: 25px;
     bottom: 15px;
   }
 }
@@ -6465,7 +6474,7 @@ a {
   }
 }
 .meet-team .swiper-pagination {
-  bottom: 40px !important;
+  bottom: 61px !important;
 }
 @media (max-width: 1300px) {
   .meet-team .swiper-pagination {
@@ -6525,6 +6534,11 @@ a {
   margin: 0 auto;
   padding-top: 70px;
   padding-bottom: 160px;
+}
+@media (max-width: 1200px) {
+  .management__content br {
+    display: none;
+  }
 }
 @media (max-width: 992px) {
   .management__content {
@@ -6660,6 +6674,9 @@ a {
   .management__sub {
     font-size: 20px;
     line-height: 30px;
+  }
+  .management__sub br {
+    display: none;
   }
 }
 @media (max-width: 992px) {
@@ -7061,9 +7078,17 @@ a {
 }
 .partnership__btn {
   margin-top: 45px;
+  padding: 19px 86px;
+}
+@media (max-width: 768px) {
+  .partnership__btn {
+    padding: 12px 45px;
+    font-size: 14px;
+  }
 }
 @media (max-width: 576px) {
   .partnership__btn {
+    padding: 12px 15px;
     margin-top: 25px;
   }
 }
@@ -7324,9 +7349,17 @@ a {
 }
 .nibh__btn {
   margin-top: 35px;
+  padding: 19px 86px;
+}
+@media (max-width: 768px) {
+  .nibh__btn {
+    padding: 12px 45px;
+    font-size: 14px;
+  }
 }
 @media (max-width: 576px) {
   .nibh__btn {
+    padding: 12px 15px;
     margin-top: 15px;
   }
 }
@@ -7478,7 +7511,7 @@ a {
 .feed-form .form input[type=submit] {
   font-weight: 500;
   line-height: 18px;
-  color: #2C394A;
+  color: #0078B6;
   background-color: var(--primary);
   border-radius: 4px;
   padding: 19px 84px;
@@ -8225,7 +8258,6 @@ a {
   width: 30px;
   height: 4px;
   background-color: var(--primary);
-  opacity: 0.5;
 }
 @media (max-width: 1300px) {
   .articles__block > ul > li:after {

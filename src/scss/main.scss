@@ -4544,6 +4544,10 @@ padding-bottom: 150px;
   font-size: 24px;
   line-height: 36px;
   color: var(--primary);
+  padding-right: 25px;
+  @media (max-width: 1270px) {
+    padding-right: 0;
+  }
   @media (max-width: 768px) {
     font-size: 18px;
     line-height: 28px;
@@ -4592,6 +4596,7 @@ padding-bottom: 150px;
   margin: 0 auto;
   padding: 35px;
   background-color: var(--blueBg);
+  text-align: center;
   @media (max-width: 1200px) {
     column-gap: 70px;
   }
@@ -4738,14 +4743,15 @@ padding-bottom: 150px;
     width: 50px;
     height: 40px;
     position: absolute;
-    right: 13px;
-    bottom: 28px;
+    right: 45px;
+    bottom: 45px;
     z-index: 99;
     cursor: pointer;
     @media (max-width: 1300px) {
       width: 30px;
       height: auto;
       bottom: 15px;
+      right: 25px;
     }
     @media (max-width: 992px) {
       bottom: 20px;
@@ -4763,14 +4769,15 @@ padding-bottom: 150px;
     position: absolute;
     width: 50px;
     height: 40px;
-    left: 13px;
-    bottom: 28px;
+    left: 45px;
+    bottom: 52px;
     z-index: 10;
     cursor: pointer;
     z-index: 99;
     @media (max-width: 1300px) {
       width: 30px;
       height: auto;
+      left: 25px;
       bottom: 15px;
     }
     @media (max-width: 992px) {
@@ -4786,7 +4793,7 @@ padding-bottom: 150px;
   }
 
     .swiper-pagination {
-      bottom: 40px !important;
+      bottom: 61px !important;
       @media (max-width: 1300px) {
         bottom: 26px !important;
       }
@@ -4849,6 +4856,11 @@ padding-bottom: 150px;
     margin: 0 auto;
     padding-top: 70px;
     padding-bottom: 160px;
+    @media (max-width: 1200px) {
+      br {
+        display: none;
+      }
+    }
     @media (max-width: 992px) {
       padding-top: 50px;
       padding-bottom: 100px;
@@ -4956,6 +4968,9 @@ padding-bottom: 150px;
       @media (max-width: 1200px) {
         font-size: 20px;
         line-height: 30px;
+        br {
+          display: none;
+        }
       }
       @media (max-width: 992px) {
         font-size: 16px;
@@ -5277,7 +5292,13 @@ padding-bottom: 150px;
 
   &__btn {
     margin-top: 45px;
+    padding: 19px 86px;
+    @media (max-width: 768px) {
+      padding: 12px 45px;
+      font-size: 14px;
+    }
     @media (max-width: 576px) {
+      padding: 12px 15px;
       margin-top: 25px;
     }
   }
@@ -5495,7 +5516,13 @@ padding-bottom: 150px;
 
   &__btn {
     margin-top: 35px;
+    padding: 19px 86px;
+    @media (max-width: 768px) {
+      padding: 12px 45px;
+      font-size: 14px;
+    }
     @media (max-width: 576px) {
+      padding: 12px 15px;
       margin-top: 15px;
     }
   }
@@ -5611,7 +5638,7 @@ padding-bottom: 150px;
     input[type="submit"] {
       font-weight: 500;
       line-height: 18px;
-      color: #2C394A;
+      color: #0078B6;
       background-color: var(--primary);
       border-radius: 4px;
       padding: 19px 84px;
@@ -6178,7 +6205,7 @@ padding-bottom: 150px;
             width: 30px;
             height: 4px;
             background-color: var(--primary);
-            opacity: 0.5;
+            //opacity: 0.5;
             @media (max-width: 1300px) {
               top: 15px;
             }
