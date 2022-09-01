@@ -6824,11 +6824,11 @@ a {
 .brands__wrap img {
   display: block;
   margin: 0 auto;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
+  mix-blend-mode: luminosity;
+  cursor: pointer;
 }
 .brands__wrap img:hover {
   -webkit-transform: translateY(-10px);

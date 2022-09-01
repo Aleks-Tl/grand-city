@@ -5089,8 +5089,9 @@ padding-bottom: 150px;
     img {
       display: block;
       margin: 0 auto;
-      filter: grayscale(100%);
       transition: all 0.2s ease 0s;
+      mix-blend-mode: luminosity;
+      cursor: pointer;
       &:hover {
         transform: translateY(-10px);
       }
