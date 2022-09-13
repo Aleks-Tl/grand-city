@@ -367,15 +367,17 @@ if (document.querySelectorAll('.property__item').length > 0) {
 // Show info property
 
 if (document.querySelectorAll('.property__content').length > 0) {
-  function toggleInfo(item) {
-    $(item).each(function (i) {
-      $(this).on('click', function (e) {
-        e.preventDefault();
-        $('.property__info').eq(i).toggleClass('active');
-      });
-    });
+  let btnInfo = document.querySelectorAll('.btn-info');
+
+
+  for (let i = 0; i < btnInfo.length; i++) {
+    btnInfo[i].addEventListener('click', function() {
+      console.log(true)
+      let parent = btnInfo[i].parentElement;
+
+      parent.querySelector('.property__info').classList.toggle('active');
+    })
   }
 
-  toggleInfo('.btn-info');
 }
 
