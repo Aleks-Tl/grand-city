@@ -325,7 +325,8 @@ if (document.querySelectorAll('.main-search').length > 0) {
     mainSearch = document.querySelector('.main-search');
 
 
-  btnSearch.addEventListener('click', () => {
+  btnSearch.addEventListener('click', (event) => {
+    event.preventDefault();
     inputSearch.classList.toggle('show');
   })
 }

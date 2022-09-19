@@ -780,7 +780,8 @@ if (document.querySelectorAll('.main-search').length > 0) {
   const btnSearch = document.querySelector('.btn-search'),
         inputSearch = document.querySelector('.main-search-wr'),
         mainSearch = document.querySelector('.main-search');
-  btnSearch.addEventListener('click', () => {
+  btnSearch.addEventListener('click', event => {
+    event.preventDefault();
     inputSearch.classList.toggle('show');
   });
 } // Transformation address

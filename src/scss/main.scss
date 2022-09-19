@@ -1260,6 +1260,7 @@
 
 // Main filter
 .main-filter {
+  max-height: 120px;
   margin-top: 170px;
   max-width: 1920px;
   margin: 170px auto 0 auto;
@@ -1297,10 +1298,13 @@
     }
 }
 .main-search {
-  width: 125px;
+  padding-left: 43px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   &-wr {
     text-align: center;
     width: 0%;
@@ -1348,13 +1352,10 @@
     }
   }
   @media (max-width: 1200px) {
-    width: 100px;
+    padding-left: 20px;
   }
   @media (max-width: 768px) {
-    width: 60px;
-  }
-  @media (max-width: 576px) {
-    flex: 0 1 20%;
+    padding-left: 10px;
   }
 }
 .btn-search {
@@ -1383,23 +1384,53 @@
   right: 10px;
 }
 .part-one {
+  padding-left: 125px;
   display: flex;
   align-items: center;
   height: 100%;
   .select2 {
     padding: 20px;
-    flex: 0 1 56%;
-    padding: 37px 30px 37px 64px;
+    flex: 0 1 100%;
+    padding: 37px 0px 37px 20px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      height: 96px;
+      width: 1px;
+      background-color: #dddddd;
+      @media (max-width: 1500px) {
+        height: 80px;
+      }
+      @media (max-width: 1200px) {
+        height: 40px;
+        //left: 54%;
+      }
+      @media (max-width: 576px) {
+        height: 0px;
+      }
+    }
+    @media (max-width: 1200px) {
+      padding-left: 20px !important;
+    }
     @media (max-width: 768px) {
       padding-left: 10px !important;
     }
     @media (max-width: 576px) {
-      flex: 0 1 80%;
+      flex: 0 1 100%;
       padding: 5px !important;
     }
   }
+  @media (max-width: 1200px) {
+    padding-left: 80px;
+  }
+  @media (max-width: 768px) {
+    padding-left: 50px;
+  }
   @media (max-width: 576px) {
-    flex: 0 1 30% !important;
+    padding-left: 34px;
   }
 }
 .part-two {
@@ -1460,7 +1491,8 @@
 .js-select3 {
 }
 .on-the-map {
-  max-width: 313px;
+  max-height: 120px;
+  width: 100%x;
   margin-left: auto;
   font-weight: 400;
   font-size: 22px;
@@ -1480,6 +1512,8 @@
   background-color: #AEC7D3;
   height: 100%;
   transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 9;
   &:hover {
     background-color: #d0e0e8;
   }
@@ -1568,13 +1602,15 @@
       left: 85%;
     }
     @media (max-width: 576px) {
-      left: 75%;
+      //left: 75%;
+      top: calc(50% + 2px);
       width: 5px;
       height: 5px;
       border-width: 1px;
       transform: rotate(225deg) translateY(calc(-50% + 10px));
     }
     @media (max-width: 480px) {
+      top: 50%;
       width: 3px;
       height: 3px;
       transform: rotate(225deg) translateY(calc(-50% + 4px));
