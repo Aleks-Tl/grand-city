@@ -1391,7 +1391,7 @@
   .select2 {
     padding: 20px;
     flex: 0 1 100%;
-    padding: 37px 0px 37px 20px;
+    padding: 37px 50px 37px 20px;
     &:before {
       content: '';
       position: absolute;
@@ -1412,6 +1412,9 @@
         height: 0px;
       }
     }
+    @media (max-width: 1500px) {
+      padding-right: 30px;
+    }
     @media (max-width: 1200px) {
       padding-left: 20px !important;
     }
@@ -1421,6 +1424,7 @@
     @media (max-width: 576px) {
       flex: 0 1 100%;
       padding: 5px !important;
+      padding-right: 30px !important;
     }
   }
   @media (max-width: 1200px) {
