@@ -395,11 +395,50 @@ if (document.querySelectorAll('.objects-property__best').length > 0) {
 // Slider property-slider
 
 if (document.querySelectorAll('.property__item').length > 0) {
-  var swiperInfo = new Swiper(".property-slider", {
+
+}
+
+
+
+
+// Show info property
+
+/* if (document.querySelectorAll('.property__content').length > 0) {
+  let btnInfo = document.querySelectorAll('.btn-info');
+
+  for (let i = 0; i < btnInfo.length; i++) {
+    btnInfo[i].addEventListener('click', function() {
+      console.log(true)
+      let parent = btnInfo[i].parentElement;
+
+      parent.querySelector('.property__info').classList.toggle('active');
+    })
+  }
+}
+ */
+
+
+if (document.querySelectorAll('.property__content').length > 0) {
+  let propertyContentContainer = document.querySelector('.property__content');
+
+    propertyContentContainer.addEventListener('click', function(e) {
+    let target = e.target;
+
+
+    document.querySelectorAll('.btn-info').forEach(item => {
+      if (target.parentElement === item) {
+        target.parentElement.previousElementSibling.classList.toggle('active');
+      }
+    })
+  });
+}
+
+function sliderInfo(item) {
+  const swiperInfo = new Swiper(item, {
     //loop: true,
     slidesPerView: 1,
     navigation: {
-      nextEl: ".property-slider-next",
+      nextEl: '.property-slider-next',
       prevEl: ".property-slider-prev",
     },
     pagination: {
@@ -410,22 +449,20 @@ if (document.querySelectorAll('.property__item').length > 0) {
 }
 
 
-
-
-// Show info property
-
 if (document.querySelectorAll('.property__content').length > 0) {
-  let btnInfo = document.querySelectorAll('.btn-info');
+  let propertyContentContainer = document.querySelector('.property__content');
 
+    propertyContentContainer.addEventListener('click', function(e) {
+    let targetElem = e.target;
 
-  for (let i = 0; i < btnInfo.length; i++) {
-    btnInfo[i].addEventListener('click', function() {
-      console.log(true)
-      let parent = btnInfo[i].parentElement;
-
-      parent.querySelector('.property__info').classList.toggle('active');
-    })
-  }
-
+    console.log(targetElem.parentElement)
+    if (targetElem.parentElement.classList.contains('property-slider-next') || targetElem.parentElement.classList.contains('property-slider-prev')) {
+      sliderInfo('.property-slider');
+    }
+  });
 }
+
+
+
+
 
