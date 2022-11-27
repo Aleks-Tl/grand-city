@@ -17,7 +17,23 @@
   z-index: 99;
   // .header__container
 
-  &__container {}
+  &__container {
+    @media (max-width: 1200px){
+      .header__contacts {
+        address {
+          display: none;
+        }
+      }
+      .languages {
+        select {
+          display: none;
+        }
+        &:after {
+          content: none !important;
+        }
+      }
+    }
+  }
 
   // .header__burg
 

@@ -549,6 +549,17 @@ a {
   transition: all 0.3s ease 0s;
   z-index: 99;
 }
+@media (max-width: 1200px) {
+  .header__container .header__contacts address {
+    display: none;
+  }
+  .header__container .languages select {
+    display: none;
+  }
+  .header__container .languages:after {
+    content: none !important;
+  }
+}
 .header__burg {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -67,7 +67,6 @@ __webpack_require__.r(__webpack_exports__);
 
 (function () {
   var _document, _document2;
-
   const burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('.header__burger');
   const menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]');
   burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', e => {
@@ -110,19 +109,19 @@ function applyFocusVisiblePolyfill(scope) {
     datetime: true,
     'datetime-local': true
   };
+
   /**
    * Helper function for legacy browsers and iframes which sometimes focus
    * elements like document, body, and non-interactive SVG.
    * @param {Element} el
    */
-
   function isValidFocusTarget(el) {
     if (el && el !== document && el.nodeName !== 'HTML' && el.nodeName !== 'BODY' && 'classList' in el && 'contains' in el.classList) {
       return true;
     }
-
     return false;
   }
+
   /**
    * Computes whether the given element should automatically trigger the
    * `focus-visible` class being added, i.e. whether it should always match
@@ -130,56 +129,47 @@ function applyFocusVisiblePolyfill(scope) {
    * @param {Element} el
    * @return {boolean}
    */
-
-
   function focusTriggersKeyboardModality(el) {
     var type = el.type;
     var tagName = el.tagName;
-
     if (tagName === 'INPUT' && inputTypesAllowlist[type] && !el.readOnly) {
       return true;
     }
-
     if (tagName === 'TEXTAREA' && !el.readOnly) {
       return true;
     }
-
     if (el.isContentEditable) {
       return true;
     }
-
     return false;
   }
+
   /**
    * Add the `focus-visible` class to the given element if it was not added by
    * the author.
    * @param {Element} el
    */
-
-
   function addFocusVisibleClass(el) {
     if (el.classList.contains('focus-visible')) {
       return;
     }
-
     el.classList.add('focus-visible');
     el.setAttribute('data-focus-visible-added', '');
   }
+
   /**
    * Remove the `focus-visible` class from the given element if it was not
    * originally added by the author.
    * @param {Element} el
    */
-
-
   function removeFocusVisibleClass(el) {
     if (!el.hasAttribute('data-focus-visible-added')) {
       return;
     }
-
     el.classList.remove('focus-visible');
     el.removeAttribute('data-focus-visible-added');
   }
+
   /**
    * If the most recent user interaction was via the keyboard;
    * and the key press did not include a meta, alt/option, or control key;
@@ -188,19 +178,16 @@ function applyFocusVisiblePolyfill(scope) {
    * of our keyboard modality state with `hadKeyboardEvent`.
    * @param {KeyboardEvent} e
    */
-
-
   function onKeyDown(e) {
     if (e.metaKey || e.altKey || e.ctrlKey) {
       return;
     }
-
     if (isValidFocusTarget(scope.activeElement)) {
       addFocusVisibleClass(scope.activeElement);
     }
-
     hadKeyboardEvent = true;
   }
+
   /**
    * If at any point a user clicks with a pointing device, ensure that we change
    * the modality away from keyboard.
@@ -209,11 +196,10 @@ function applyFocusVisiblePolyfill(scope) {
    * pointing device, while we still think we're in keyboard modality.
    * @param {Event} e
    */
-
-
   function onPointerDown(e) {
     hadKeyboardEvent = false;
   }
+
   /**
    * On `focus`, add the `focus-visible` class to the target if:
    * - the target received focus as a result of keyboard navigation, or
@@ -221,29 +207,24 @@ function applyFocusVisiblePolyfill(scope) {
    *   via the keyboard (e.g. a text box)
    * @param {Event} e
    */
-
-
   function onFocus(e) {
     // Prevent IE from focusing the document or HTML element.
     if (!isValidFocusTarget(e.target)) {
       return;
     }
-
     if (hadKeyboardEvent || focusTriggersKeyboardModality(e.target)) {
       addFocusVisibleClass(e.target);
     }
   }
+
   /**
    * On `blur`, remove the `focus-visible` class from the target.
    * @param {Event} e
    */
-
-
   function onBlur(e) {
     if (!isValidFocusTarget(e.target)) {
       return;
     }
-
     if (e.target.classList.contains('focus-visible') || e.target.hasAttribute('data-focus-visible-added')) {
       // To detect a tab/window switch, we look for a blur event followed
       // rapidly by a visibility change.
@@ -257,13 +238,12 @@ function applyFocusVisiblePolyfill(scope) {
       removeFocusVisibleClass(e.target);
     }
   }
+
   /**
    * If the user changes tabs, keep track of whether or not the previously
    * focused element had .focus-visible.
    * @param {Event} e
    */
-
-
   function onVisibilityChange(e) {
     if (document.visibilityState === 'hidden') {
       // If the tab becomes active again, the browser will handle calling focus
@@ -273,18 +253,16 @@ function applyFocusVisiblePolyfill(scope) {
       if (hadFocusVisibleRecently) {
         hadKeyboardEvent = true;
       }
-
       addInitialPointerMoveListeners();
     }
   }
+
   /**
    * Add a group of listeners to detect usage of any pointing devices.
    * These listeners will be added when the polyfill first loads, and anytime
    * the window is blurred, so that they are active when the window regains
    * focus.
    */
-
-
   function addInitialPointerMoveListeners() {
     document.addEventListener('mousemove', onInitialPointerMove);
     document.addEventListener('mousedown', onInitialPointerMove);
@@ -296,7 +274,6 @@ function applyFocusVisiblePolyfill(scope) {
     document.addEventListener('touchstart', onInitialPointerMove);
     document.addEventListener('touchend', onInitialPointerMove);
   }
-
   function removeInitialPointerMoveListeners() {
     document.removeEventListener('mousemove', onInitialPointerMove);
     document.removeEventListener('mousedown', onInitialPointerMove);
@@ -308,6 +285,7 @@ function applyFocusVisiblePolyfill(scope) {
     document.removeEventListener('touchstart', onInitialPointerMove);
     document.removeEventListener('touchend', onInitialPointerMove);
   }
+
   /**
    * When the polfyill first loads, assume the user is in keyboard modality.
    * If any event is received from a pointing device (e.g. mouse, pointer,
@@ -315,39 +293,38 @@ function applyFocusVisiblePolyfill(scope) {
    * This accounts for situations where focus enters the page from the URL bar.
    * @param {Event} e
    */
-
-
   function onInitialPointerMove(e) {
     // Work around a Safari quirk that fires a mousemove on <html> whenever the
     // window blurs, even if you're tabbing out of the page. ¯\_(ツ)_/¯
     if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {
       return;
     }
-
     hadKeyboardEvent = false;
     removeInitialPointerMoveListeners();
-  } // For some kinds of state, we are interested in changes at the global scope
+  }
+
+  // For some kinds of state, we are interested in changes at the global scope
   // only. For example, global pointer input, global key presses and global
   // visibility change should affect the state at every scope:
-
-
   document.addEventListener('keydown', onKeyDown, true);
   document.addEventListener('mousedown', onPointerDown, true);
   document.addEventListener('pointerdown', onPointerDown, true);
   document.addEventListener('touchstart', onPointerDown, true);
   document.addEventListener('visibilitychange', onVisibilityChange, true);
-  addInitialPointerMoveListeners(); // For focus and blur, we specifically care about state changes in the local
+  addInitialPointerMoveListeners();
+
+  // For focus and blur, we specifically care about state changes in the local
   // scope. This is because focus / blur events that originate from within a
   // shadow root are not re-dispatched from the host element if it was already
   // the active element in its own scope:
-
   scope.addEventListener('focus', onFocus, true);
-  scope.addEventListener('blur', onBlur, true); // We detect that a node is a ShadowRoot by ensuring that it is a
+  scope.addEventListener('blur', onBlur, true);
+
+  // We detect that a node is a ShadowRoot by ensuring that it is a
   // DocumentFragment and also has a host property. This check covers native
   // implementation and polyfill implementation transparently. If we only cared
   // about the native implementation, we could just check if the scope was
   // an instance of a ShadowRoot.
-
   if (scope.nodeType === Node.DOCUMENT_FRAGMENT_NODE && scope.host) {
     // Since a ShadowRoot is a special kind of DocumentFragment, it does not
     // have a root element to add a class to. So, we add this attribute to the
@@ -357,20 +334,20 @@ function applyFocusVisiblePolyfill(scope) {
     document.documentElement.classList.add('js-focus-visible');
     document.documentElement.setAttribute('data-js-focus-visible', '');
   }
-} // It is important to wrap all references to global window and document in
+}
+
+// It is important to wrap all references to global window and document in
 // these checks to support server-side rendering use cases
 // @see https://github.com/WICG/focus-visible/issues/199
-
-
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   // Make the polyfill helper globally available. This can be used as a signal
   // to interested libraries that wish to coordinate with the polyfill for e.g.,
   // applying the polyfill to a shadow root:
-  window.applyFocusVisiblePolyfill = applyFocusVisiblePolyfill; // Notify interested libraries of the polyfill's presence, in case the
+  window.applyFocusVisiblePolyfill = applyFocusVisiblePolyfill;
+
+  // Notify interested libraries of the polyfill's presence, in case the
   // polyfill was loaded lazily:
-
   var event;
-
   try {
     event = new CustomEvent('focus-visible-polyfill-ready');
   } catch (error) {
@@ -378,10 +355,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     event = document.createEvent('CustomEvent');
     event.initCustomEvent('focus-visible-polyfill-ready', false, false, {});
   }
-
   window.dispatchEvent(event);
 }
-
 if (typeof document !== 'undefined') {
   // Apply the polyfill to the global document, so that no JavaScript
   // coordination is required to use the polyfill in the top-level document:
@@ -477,12 +452,13 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener("DOMContentLoaded", function () {
   transformAddressHeader();
-}); // Sticky filter
+});
+
+// Sticky filter
 
 if (document.querySelectorAll('.main-filter').length > 0) {
   function stickyFilter() {
     const filterSticky = document.querySelector('.main-filter');
-
     if (document.body.scrollTop > document.documentElement.scrollHeight - 1300 || document.documentElement.scrollTop < document.documentElement.scrollHeight - 1300) {
       console.log('Hi');
       filterSticky.classList.remove('static');
@@ -490,28 +466,22 @@ if (document.querySelectorAll('.main-filter').length > 0) {
       filterSticky.classList.add('static');
     }
   }
-
   window.addEventListener('scroll', () => {
     stickyFilter();
   });
 }
-
 window.onscroll = function () {
   scrollFunction();
 };
-
 window.onresize = function () {
   transformAddressHeader();
 };
-
 function scrollFunction() {
   let clientWidth = document.documentElement.clientWidth;
-
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     document.querySelector('.header__logo').classList.add('scroll');
     document.querySelector('.header__logo-scroll').classList.add('scroll');
     document.querySelector('header').classList.add('fixedMenu');
-
     if (clientWidth >= 1200) {
       document.querySelector('.languages').classList.add('scrolloc');
       document.querySelector('.header__contacts address').classList.add('scrolloc');
@@ -520,14 +490,12 @@ function scrollFunction() {
     document.querySelector('.header__logo').classList.remove('scroll');
     document.querySelector('.header__logo-scroll').classList.remove('scroll');
     document.querySelector('header').classList.remove('fixedMenu');
-
     if (clientWidth >= 1200) {
       document.querySelector('.languages').classList.remove('scrolloc');
       document.querySelector('.header__contacts address').classList.remove('scrolloc');
     }
   }
 }
-
 if (document.querySelectorAll('.mySwiper3').length > 0) {
   let swiperTwo = new Swiper(".mySwiper3", {
     watchSlidesProgress: true,
@@ -566,7 +534,6 @@ if (document.querySelectorAll('.mySwiper3').length > 0) {
     }
   });
 }
-
 if (document.querySelectorAll('.mySwiper4').length > 0) {
   let swiper4 = new Swiper(".mySwiper4", {
     loop: true,
@@ -580,9 +547,9 @@ if (document.querySelectorAll('.mySwiper4').length > 0) {
       clickable: true
     }
   });
-} // Slider for object-page-slider
+}
 
-
+// Slider for object-page-slider
 if (document.querySelectorAll('.mySwiper10').length > 0) {
   let swiper10 = new Swiper(".mySwiper10", {
     loop: true,
@@ -596,8 +563,9 @@ if (document.querySelectorAll('.mySwiper10').length > 0) {
       clickable: true
     }
   });
-} // Filter
+}
 
+// Filter
 
 if (document.querySelectorAll('.property__item').length > 0) {
   const filterBox = document.querySelectorAll('.property__item');
@@ -608,20 +576,19 @@ if (document.querySelectorAll('.property__item').length > 0) {
     let filterClass = event.target.dataset['f'];
     filterBox.forEach(elem => {
       elem.classList.remove('hide');
-
       if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
         elem.classList.add('hide');
-
         if (elem.classList.contains('hide')) {
           boxContent.append(elem);
         }
       }
     });
-  }); // Activiti class for filter
+  });
+
+  // Activiti class for filter
 
   const btnContainer = document.querySelector('.property__list');
   let items = btnContainer.querySelectorAll('li');
-
   for (var i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function (e) {
       if (!e.target.classList.contains('active')) {
@@ -633,7 +600,6 @@ if (document.querySelectorAll('.property__item').length > 0) {
     });
   }
 }
-
 if (document.querySelectorAll('.object-slider__wrapper').length > 0) {
   let swiperSm = new Swiper(".mySwiper-interior-sm", {
     loop: true,
@@ -679,7 +645,6 @@ if (document.querySelectorAll('.object-slider__wrapper').length > 0) {
     }
   });
 }
-
 if (document.querySelectorAll('.object-slider__wrapper').length > 0) {
   let swiperSm = new Swiper(".mySwiper-exterior-sm", {
     loop: true,
@@ -724,26 +689,24 @@ if (document.querySelectorAll('.object-slider__wrapper').length > 0) {
       swiper: swiperSm
     }
   });
-} // Tabs
+}
 
+// Tabs
 
 if (document.querySelectorAll('.object-info__header').length > 0) {
   let tabs = document.querySelector('.object-info__header'),
-      tabsItem = document.querySelectorAll('.object-info__item'),
-      tabsInfo = document.querySelectorAll('.object-info__box');
+    tabsItem = document.querySelectorAll('.object-info__item'),
+    tabsInfo = document.querySelectorAll('.object-info__box');
   tabs.addEventListener('click', fTabs);
-
   function fTabs(event) {
     if (event.target.className == "object-info__item") {
       //let dataTab = event.target.getAttribute('data-tab');
-      let currentDataTab = event.target.dataset.tab; //console.log(currentDataTab);
-
+      let currentDataTab = event.target.dataset.tab;
+      //console.log(currentDataTab);
       for (let i = 0; i < tabsItem.length; i++) {
         tabsItem[i].classList.remove('active');
       }
-
       event.target.classList.add('active');
-
       for (let i = 0; i < tabsInfo.length; i++) {
         if (currentDataTab == i) {
           tabsInfo[i].classList.add('active');
@@ -754,7 +717,6 @@ if (document.querySelectorAll('.object-info__header').length > 0) {
     }
   }
 }
-
 if (document.querySelectorAll('.main-filter').length > 0) {
   $(".js-select2").select2({
     closeOnSelect: false,
@@ -775,53 +737,54 @@ if (document.querySelectorAll('.main-filter').length > 0) {
     allowClear: true
   });
 }
-
 if (document.querySelectorAll('.main-search').length > 0) {
   const btnSearch = document.querySelector('.btn-search'),
-        inputSearch = document.querySelector('.main-search-wr'),
-        mainSearch = document.querySelector('.main-search');
+    inputSearch = document.querySelector('.main-search-wr'),
+    mainSearch = document.querySelector('.main-search');
   btnSearch.addEventListener('click', event => {
     event.preventDefault();
     inputSearch.classList.toggle('show');
   });
-} // Transformation address
+}
 
+// Transformation address
 
 function transformAddressHeader() {
   const headerNav = document.querySelector('.header__nav'),
-        headerContacts = document.querySelector('.header__contacts'),
-        headerBurg = document.querySelector('.header__burg'),
-        clientWidth = document.documentElement.clientWidth;
-
+    headerContacts = document.querySelector('.header__contacts'),
+    headerBurg = document.querySelector('.header__burg'),
+    clientWidth = document.documentElement.clientWidth;
   if (clientWidth <= 1200) {
     headerNav.append(document.querySelector('.header__location'));
   } else {
     headerContacts.prepend(document.querySelector('.header__location'));
   }
-
   if (clientWidth <= 1200) {
     headerNav.append(document.querySelector('.languages'));
   } else {
     headerBurg.append(document.querySelector('.languages'));
   }
-} // Вызов модального окна
+}
 
-
+// Вызов модального окна
 $('.button').click(function () {
   $('.overlay').fadeIn();
-}); // Закрытие окна на крестик
+});
 
+// Закрытие окна на крестик
 $('.close-popup').click(function () {
   $('.overlay').fadeOut();
-}); // Закрытие окна на поле
+});
 
+// Закрытие окна на поле
 $(document).mouseup(function (e) {
   var popup = $('.popup');
-
   if (e.target != popup[0] && popup.has(e.target).length === 0) {
     $('.overlay').fadeOut();
   }
-}); // Slider objects-property__best
+});
+
+// Slider objects-property__best
 
 if (document.querySelectorAll('.objects-property__best').length > 0) {
   var swiper5 = new Swiper(".objects-property-slider", {
@@ -836,8 +799,9 @@ if (document.querySelectorAll('.objects-property__best').length > 0) {
       clickable: true
     }
   });
-} // Slider property-slider
+}
 
+// Slider property-slider
 
 if (document.querySelectorAll('.property__item').length > 0) {
   const swiperInfo = new Swiper('.property-slider', {
@@ -852,8 +816,9 @@ if (document.querySelectorAll('.property__item').length > 0) {
       clickable: true
     }
   });
-} // Show info property
+}
 
+// Show info property
 
 if (document.querySelectorAll('.property__content').length > 0) {
   let propertyContentContainer = document.querySelector('.property__content');
@@ -866,6 +831,7 @@ if (document.querySelectorAll('.property__content').length > 0) {
     });
   });
 }
+
 /* if (document.querySelectorAll('.property__content').length > 0) {
   let propertyContentContainer = document.querySelector('.property__content');
 
